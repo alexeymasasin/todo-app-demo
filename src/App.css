@@ -1,4 +1,11 @@
 .App {
   text-align: center;
   margin: 0 auto;
+  max-width: 600px;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 6rem;
+  margin: 100px 0 20px;
 }

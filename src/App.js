@@ -4,13 +4,26 @@ import TodoForm from './components/Todos/TodoForm';
 import TodoList from './components/Todos/TodoList';
 
 function App() {
-  const [todos, setTodos] = useState(['todo1', 'todo2']);
+  const [todos, setTodos] = useState([]);
+  const [order, setOrder] = useState('DOWN');
+
+  const addTodoHandler = (text) => {
+    setTodos([...todos, text]);
+  };
+
+  const todosOrderHandler = () => {
+    if (order === 'DOWN') {
+      setOrder('UP');
+    } else {
+      setOrder('DOWN');
+    }
+  };
 
   return (
     <div className="App">
       <h1>Todo App</h1>
-      <TodoForm todos={todos} setTodos={setTodos}/>
-      <TodoList todos={todos}/>
+      <TodoForm addTodo={addTodoHandler} switchOrder={todosOrderHandler}/>
+      <TodoList order={order} todos={todos}/>
     </div>
   );
 }

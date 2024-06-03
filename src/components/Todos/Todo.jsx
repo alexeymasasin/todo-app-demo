@@ -1,7 +1,9 @@
-function Todo(props) {
+function Todo({ todo }) {
   return (
     <div>
-      {props.todo}
+      <div>
+        {todo}
+      </div>
     </div>
   );
 }
