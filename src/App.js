@@ -11,6 +11,10 @@ function App() {
     setTodos([...todos, text]);
   };
 
+  const deleteTodoHandler = (index) => {
+    setTodos(todos.filter((_, i) => i !== index));
+  };
+
   const todosOrderHandler = () => {
     if (order === 'DOWN') {
       setOrder('UP');
@@ -23,7 +27,7 @@ function App() {
     <div className="App">
       <h1>Todo App</h1>
       <TodoForm addTodo={addTodoHandler} switchOrder={todosOrderHandler}/>
-      <TodoList order={order} todos={todos}/>
+      <TodoList deleteTodo={deleteTodoHandler} order={order} todos={todos}/>
     </div>
   );
 }

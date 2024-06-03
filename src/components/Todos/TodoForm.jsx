@@ -24,7 +24,8 @@ function TodoForm({ addTodo, switchOrder }) {
     <div className={`${styles.todo_form_container} `}>
       <form onSubmit={onSubmitHandler}>
         <input placeholder="Enter new todo..." type="text"
-               value={text} onChange={e => setText(e.target.value)}/>
+               value={text} onChange={e => setText(e.target.value)}
+               maxLength={50}/>
         <button type="submit">Done!</button>
       </form>
 

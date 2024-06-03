@@ -1,5 +1,4 @@
 .todo_form_container {
-  margin-bottom: 30px;
 }
 
 .todo_form_container form {
@@ -22,10 +21,12 @@
   color: #FDFFFE;
   font-size: 1.3rem;
   transition: 0.1s ease;
+  user-select: none;
 }
 
 .todo_form_container button:hover {
   background-color: #FDFFFE;
+  color: #091133;
 }
 
 .todo_form_container button:active {
@@ -46,10 +47,13 @@
   cursor: pointer;
   color: #FDFFFE;
   transition: 0.15s ease;
+  user-select: none;
 }
 
 .order_arrow_icon:hover {
   color: #0284FF;
-  transform: scale(1.25);
 }
 
+.order_arrow_icon:active {
+  color: #63a4ff;
+}
