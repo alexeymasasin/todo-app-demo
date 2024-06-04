@@ -11,13 +11,14 @@
   width: 45%;
   height: 40px;
   font-size: 1.3rem;
+  background-color: #FDFFFE;
 }
 
 .todo_form_container button {
-  margin-left: 20px;
+  margin-left: 10px;
   height: 60px;
   cursor: pointer;
-  background-color: #0284FF;
+  background-color: #005bdc;
   color: #FDFFFE;
   font-size: 1.3rem;
   transition: 0.1s ease;
@@ -25,8 +26,7 @@
 }
 
 .todo_form_container button:hover {
-  background-color: #FDFFFE;
-  color: #091133;
+  background-color: #0069ff;
 }
 
 .todo_form_container button:active {
@@ -51,9 +51,9 @@
 }
 
 .order_arrow_icon:hover {
-  color: #0284FF;
+  color: #005bdc;
 }
 
 .order_arrow_icon:active {
-  color: #63a4ff;
+  color: #0069ff;
 }

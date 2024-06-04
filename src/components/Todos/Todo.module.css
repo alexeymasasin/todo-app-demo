@@ -21,6 +21,6 @@
 
 .todo_icon {
   font-size: 1.8rem;
-  margin-right: 10px;
+  margin: 0 6px 0 -10px;
   color: #FDFFFE;
 }
