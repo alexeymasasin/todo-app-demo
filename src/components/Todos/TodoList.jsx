@@ -8,8 +8,8 @@ function TodoList({ deleteTodo, order, todos }) {
       <div className={styles.todo_list_container}>
         {todos.length === 0 && <h2>Todo list is empty</h2>}
         {todos.map(
-          (todo, i) => <Todo index={i} deleteTodo={deleteTodo} key={i}
-                             todo={todo}/>)}
+          (todo) => <Todo deleteTodo={deleteTodo} todo={todo} key={todo.id}
+          />)}
       </div>
     );
   } else {
@@ -17,8 +17,8 @@ function TodoList({ deleteTodo, order, todos }) {
       <div className={styles.todo_list_container}>
         {todos.length === 0 && <h2>Todo list is empty</h2>}
         {todos.map(
-          (todo, i) => <Todo index={i} deleteTodo={deleteTodo} key={i}
-                             todo={todo}/>)
+          (todo) => <Todo deleteTodo={deleteTodo} key={todo.id}
+                          todo={todo}/>)
           .reverse()}
       </div>
     );
