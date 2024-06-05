@@ -1,5 +1,5 @@
 .faq {
-  margin: 100px auto 20px;
+  margin: 0 auto;
   text-align: center;
   max-width: 800px;
 }
@@ -10,7 +10,6 @@
 }
 
 .q_and_a {
-  padding-bottom: 100px;
 }
 
 .q_and_a > h2 {
