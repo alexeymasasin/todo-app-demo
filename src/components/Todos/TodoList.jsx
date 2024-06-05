@@ -1,7 +1,7 @@
 import Todo from './Todo';
 import styles from './TodoList.module.css';
 
-function TodoList({ deleteTodo, order, todos }) {
+function TodoList({ deleteTodo, order, todos, toggleTodo }) {
 
   if (order === 'DOWN') {
     return (
@@ -9,6 +9,7 @@ function TodoList({ deleteTodo, order, todos }) {
         {todos.length === 0 && <h2>Todo list is empty</h2>}
         {todos.map(
           (todo) => <Todo deleteTodo={deleteTodo} todo={todo} key={todo.id}
+                          toggleTodo={toggleTodo}
           />)}
       </div>
     );
@@ -18,7 +19,7 @@ function TodoList({ deleteTodo, order, todos }) {
         {todos.length === 0 && <h2>Todo list is empty</h2>}
         {todos.map(
           (todo) => <Todo deleteTodo={deleteTodo} key={todo.id}
-                          todo={todo}/>)
+                          todo={todo} toggleTodo={toggleTodo}/>)
           .reverse()}
       </div>
     );

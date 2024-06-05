@@ -8,6 +8,22 @@
 }
 
 body {
-  background-color: #091133;
+  /*background-color: #091133;*/
   color: #FDFFFE;
+  background: linear-gradient(-180deg, #091133, #091133, #0069ff);
+  animation: gradient 10s ease-in-out infinite;
+  height: 100vh;
+  background-size: 100% 400%;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 32%;
+  }
+  50% {
+    background-position: 0% 55%;
+  }
+  100% {
+    background-position: 0% 32%;
+  }
 }

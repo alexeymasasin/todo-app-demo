@@ -21,6 +21,13 @@ function App() {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
+  const toggleTodoHandler = (id) => {
+    setTodos(todos.map(todo => todo.id === id
+      ? { ...todo, isCompleted: !todo.isCompleted }
+      : { ...todo },
+    ));
+  };
+
   const todosOrderHandler = () => {
     if (order === 'DOWN') {
       setOrder('UP');
@@ -33,7 +40,8 @@ function App() {
     <div className="App">
       <h1>Todo App</h1>
       <TodoForm addTodo={addTodoHandler} switchOrder={todosOrderHandler}/>
-      <TodoList deleteTodo={deleteTodoHandler} order={order} todos={todos}/>
+      <TodoList deleteTodo={deleteTodoHandler} order={order} todos={todos}
+                toggleTodo={toggleTodoHandler}/>
     </div>
   );
 }

@@ -1,15 +1,30 @@
 .todo {
   display: flex;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 12px;
   height: 40px;
   margin: 15px 0;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   border-radius: 12px;
   border: 2px solid #FDFFFE;
   color: #FDFFFE;
   background-color: rgba(253, 255, 254, 0.06);
   user-select: none;
+  transition: 0.3s
+}
+
+.completed_todo {
+  opacity: 0.5;
+}
+
+.completed_todo:hover {
+  opacity: 0.65
+}
+
+.todo.completed_todo .todo_icon,
+.todo.completed_todo .todo_done_icon,
+.todo.completed_todo .todo_delete_icon {
+  color: #FDFFFE;
 }
 
 .todo_text {
@@ -21,6 +36,32 @@
 
 .todo_icon {
   font-size: 1.8rem;
-  margin: 0 6px 0 -10px;
+  margin-right: 10px;
   color: #FDFFFE;
 }
+
+.todo_done_icon {
+  margin-left: 4px;
+}
+
+.todo_delete_icon,
+.todo_done_icon {
+  cursor: pointer;
+  color: #FDFFFE;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+.todo_delete_icon:hover,
+.todo_done_icon:hover {
+  transform: scale(1.2);
+}
+
+.todo_delete_icon:hover {
+  color: #f62f0c;
+}
+
+.todo_done_icon:hover {
+  color: #47f60c;
+}
+

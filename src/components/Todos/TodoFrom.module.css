@@ -21,7 +21,7 @@
   background-color: #005bdc;
   color: #FDFFFE;
   font-size: 1.3rem;
-  transition: 0.1s ease;
+  transition: 0.3s;
   user-select: none;
 }
 
@@ -46,7 +46,7 @@
   height: 30px;
   cursor: pointer;
   color: #FDFFFE;
-  transition: 0.15s ease;
+  transition: 0.3s;
   user-select: none;
 }
 
