@@ -60,6 +60,10 @@ function App() {
       <TodoForm addTodo={addTodoHandler} switchOrder={todosOrderHandler}/>
       <TodoList deleteTodo={deleteTodoHandler} order={order} todos={todos}
                 toggleTodo={toggleTodoHandler}/>
+      {!!completedTodosCount &&
+        <h2>You have completed {completedTodosCount} {completedTodosCount > 1
+          ? 'todos'
+          : 'todo'}</h2>}
     </div>
   );
 }

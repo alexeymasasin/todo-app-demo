@@ -14,11 +14,15 @@
   background-color: #FDFFFE;
 }
 
+.todo_form_container input:focus {
+  outline: 3px #0069ff solid;
+}
+
 .todo_form_container button {
   margin-left: 10px;
   height: 60px;
   cursor: pointer;
-  background-color: #005bdc;
+  background-color: #0069ff;
   color: #FDFFFE;
   font-size: 1.3rem;
   transition: 0.3s;
@@ -26,7 +30,7 @@
 }
 
 .todo_form_container button:hover {
-  background-color: #0069ff;
+  background-color: #005bdc;
 }
 
 .todo_form_container button:active {

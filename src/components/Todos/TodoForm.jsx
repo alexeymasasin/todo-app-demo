@@ -26,7 +26,7 @@ function TodoForm({ addTodo, switchOrder }) {
         <input placeholder="Enter new todo..." type="text"
                value={text} onChange={e => setText(e.target.value)}
                maxLength={50}/>
-        <button type="submit">Done</button>
+        <button type="submit" title="Done">Done</button>
       </form>
 
       <OrderArrowIcon onClick={() => {
