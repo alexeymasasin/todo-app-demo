@@ -9,16 +9,41 @@
   font-size: 6rem;
 }
 
-.q_and_a {
+.faq_left {
+  margin-right: 200px;
 }
 
-.q_and_a > h2 {
-  font-size: 3rem;
-  margin: 0 0 8px;
+.faq_right {
+  margin-left: 200px;
 }
 
-.q_and_a > h3 {
+.faq_left,
+.faq_right {
+  transition: 0.5s;
+}
+
+.faq_left:hover,
+.faq_right:hover {
+  transform: scale(1.05);
+}
+
+.faq_left > h2,
+.faq_right > h2 {
+  background-color: rgba(253, 255, 254, 0.11);
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-size: 2.6rem;
+  text-align: left;
+}
+
+.faq_left > h3,
+.faq_right > h3 {
+  width: 80%;
   font-size: 1.4rem;
-  margin: 16px 0;
+  margin: 16px auto 32px;
   font-weight: 400;
+  background-color: rgba(0, 0, 0, 0.35);
+  padding: 12px 24px;
+  border-radius: 12px;
+
 }
