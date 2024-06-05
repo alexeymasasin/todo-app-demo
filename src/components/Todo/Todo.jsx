@@ -15,7 +15,7 @@ function Todo() {
       isCompleted: false,
       id: uuidv4(),
     };
-    setTodos([...todos, newTodo]);
+    newTodo.text.trim().length > 1 && setTodos([...todos, newTodo]);
   };
 
   const deleteTodoHandler = (id) => {
