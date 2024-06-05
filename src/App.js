@@ -7,12 +7,12 @@ import './App.css';
 
 function App() {
   return (
-    <BrowserRouter basename={`${process.env.PUBLIC_URL}`}>
+    <BrowserRouter basename={'/todo/'}>
       <div className="App">
         <Sidebar/>
         <Routes>
           <Route path="*" element={<NotFound/>}/>
-          <Route path="" element={<Todo/>}/>
+          <Route path="/todo/" element={<Todo/>}/>
           <Route path="/faq/" element={<FAQ/>}/>
         </Routes>
       </div>

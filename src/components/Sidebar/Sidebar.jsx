@@ -13,8 +13,8 @@ function Sidebar(props) {
   return (
     <div className={styles.sidebar}>
       <div>
-        <NavLink to="/">
-          <Button title="Todos"><RiStickyNoteLine/></Button>
+        <NavLink to="/todo/">
+          <Button title="Todo"><RiStickyNoteLine/></Button>
         </NavLink>
         <NavLink to="/faq/">
           <Button title="FAQ"><RiQuestionLine/></Button>
