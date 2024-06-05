@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import './App.css';
 import TodoForm from './components/Todos/TodoForm';
 import TodoList from './components/Todos/TodoList';
+import TodosActions from './components/Todos/TodosActions';
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -28,6 +29,18 @@ function App() {
     ));
   };
 
+  const resetTodosHandler = () => {
+    if (window.confirm('Are you sure you want to delete all of your todos?')) {
+      setTodos([]);
+    } else {
+      return;
+    }
+  };
+
+  const deleteCompletedTodosHandler = () => {
+    setTodos(todos.filter((todo) => !todo.isCompleted));
+  };
+
   const todosOrderHandler = () => {
     if (order === 'DOWN') {
       setOrder('UP');
@@ -36,8 +49,13 @@ function App() {
     }
   };
 
+  const completedTodosCount = todos.filter((todo) => todo.isCompleted).length;
+
   return (
     <div className="App">
+      {!!todos.length && <TodosActions resetTodos={resetTodosHandler}
+                                       deleteCompletedTodos={deleteCompletedTodosHandler}
+                                       completedTodosExist={!!completedTodosCount}/>}
       <h1>Todo App</h1>
       <TodoForm addTodo={addTodoHandler} switchOrder={todosOrderHandler}/>
       <TodoList deleteTodo={deleteTodoHandler} order={order} todos={todos}

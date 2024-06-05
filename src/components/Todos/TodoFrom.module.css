@@ -48,6 +48,7 @@
   color: #FDFFFE;
   transition: 0.3s;
   user-select: none;
+  margin-bottom: 20px;
 }
 
 .order_arrow_icon:hover {

@@ -1,0 +1,29 @@
+.button {
+  cursor: pointer;
+  margin-left: 10px;
+  background-color: transparent;
+  color: #FDFFFE;
+  font-size: 1.6rem;
+  transition: 0.3s;
+  user-select: none;
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  opacity: 0.5;
+}
+
+.button:hover {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+.button:active {
+  color: #0069ff;
+  transform: scale(1.05);
+}
+
+.button:disabled {
+  opacity: 0.3;
+}

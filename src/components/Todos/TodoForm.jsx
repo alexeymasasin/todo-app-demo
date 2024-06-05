@@ -35,6 +35,7 @@ function TodoForm({ addTodo, switchOrder }) {
       }}
                       className={`${styles.order_arrow_icon} `}
                       style={arrowUp ? rotate180Deg : rotate0Deg}
+                      title="Change Todos Order"
       />
     </div>
 
