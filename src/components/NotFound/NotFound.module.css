@@ -1,0 +1,24 @@
+.not_found {
+  margin: 100px auto 20px;
+  text-align: center;
+  max-width: 800px;
+}
+
+.not_found_title {
+  font-weight: 500;
+  font-size: 6rem;
+}
+
+.go_home {
+  font-size: 3rem;
+  color: #FDFFFE;
+  opacity: 0.85;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.go_home:hover {
+  color: #0069ff;
+  opacity: 1;
+  transform: scale(1.05);
+}

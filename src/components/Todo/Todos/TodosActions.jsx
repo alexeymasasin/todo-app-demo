@@ -1,5 +1,5 @@
 import { GrClear, GrRefresh } from 'react-icons/gr';
-import Button from './../UI/Button';
+import Button from '../../UI/Button';
 import styles from './TodosActions.module.css';
 
 function todosActions({

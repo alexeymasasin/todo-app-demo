@@ -1,11 +1,9 @@
 import { useState } from 'react';
 import styles from './TodoFrom.module.css';
-import './../../img/TodoForm/order-arrow.svg';
+import '../../../img/TodoForm/order-arrow.svg';
 import {
   ReactComponent as OrderArrowIcon,
-} from './../../img/TodoForm/order-arrow.svg';
-
-console.log(styles);
+} from '../../../img/TodoForm/order-arrow.svg';
 
 function TodoForm({ addTodo, switchOrder }) {
   const [text, setText] = useState('');

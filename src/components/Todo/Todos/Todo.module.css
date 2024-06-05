@@ -9,7 +9,6 @@
   border: 2px solid #FDFFFE;
   color: #FDFFFE;
   background-color: rgba(253, 255, 254, 0.06);
-  user-select: none;
   transition: 0.3s
 }
 

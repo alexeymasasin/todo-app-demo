@@ -1,0 +1,25 @@
+.faq {
+  margin: 100px auto 20px;
+  text-align: center;
+  max-width: 800px;
+}
+
+.faq_title {
+  font-weight: 500;
+  font-size: 6rem;
+}
+
+.q_and_a {
+  padding-bottom: 100px;
+}
+
+.q_and_a > h2 {
+  font-size: 3rem;
+  margin: 0 0 8px;
+}
+
+.q_and_a > h3 {
+  font-size: 1.4rem;
+  margin: 16px 0;
+  font-weight: 400;
+}

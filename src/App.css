@@ -1,11 +1,12 @@
 .App {
-  text-align: center;
-  margin: 0 auto;
-  max-width: 600px;
+  /*display: grid;*/
+  /*grid-template-rows: 50px 1fr;*/
+  /*grid-template-columns: 100px 8fr;*/
+
 }
 
 h1 {
   font-weight: 500;
   font-size: 6rem;
-  margin: 100px 0 20px;
+  margin: 0 0 20px;
 }
