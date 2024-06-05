@@ -7,12 +7,12 @@ import './App.css';
 
 function App() {
   return (
-    <BrowserRouter basename={'/todo/'}>
+    <BrowserRouter basename="/todo-app-demo/">
       <div className="App">
         <Sidebar/>
         <Routes>
           <Route path="*" element={<NotFound/>}/>
-          <Route path="/todo/" element={<Todo/>}/>
+          <Route path="/" element={<Todo/>}/>
           <Route path="/faq/" element={<FAQ/>}/>
         </Routes>
       </div>
