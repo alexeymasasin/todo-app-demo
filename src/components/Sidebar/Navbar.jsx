@@ -7,10 +7,9 @@ import {
   RiSettings2Line,
   RiStickyNoteLine,
 } from 'react-icons/ri';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Navbar(props) {
-  const location = useLocation();
 
   return (
     <div className={styles.sidebar}>

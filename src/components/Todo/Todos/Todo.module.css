@@ -64,6 +64,11 @@
   .completed_todo:hover {
     opacity: 0.65
   }
+
+  .todo_icon:hover {
+    transform: scale(1.15);
+  }
+
 }
 
 @media (hover: none) {

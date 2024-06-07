@@ -2,22 +2,27 @@ import { RiTodoLine } from 'react-icons/ri';
 import { MdDeleteOutline, MdDone } from 'react-icons/md';
 import styles from './Todo.module.css';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 function Todo({ deleteTodo, todo, toggleTodo }) {
   const [isImportant, setIsImportant] = useState(false);
+  const { t } = useTranslation();
+
   return (
     <div className={`${styles.todo} 
       ${todo.isCompleted ? styles.completed_todo : ''}`}>
       <div className={styles.todo_text}>
-        <RiTodoLine onClick={() => setIsImportant(!isImportant)}
+        <RiTodoLine title={t('IMPORTANT_TODO')}
+                    onClick={() => setIsImportant(!isImportant)}
                     className={`${styles.todo_icon} ${isImportant
                       ? styles.important
                       : ''}`}/>
         {todo.text}
       </div>
-      <MdDeleteOutline onClick={() => deleteTodo(todo.id)}
+      <MdDeleteOutline title={t('DELETE_TODO')}
+                       onClick={() => deleteTodo(todo.id)}
                        className={styles.todo_delete_icon}/>
-      <MdDone onClick={() => toggleTodo(todo.id)}
+      <MdDone title={t('COMPLETE_TODO')} onClick={() => toggleTodo(todo.id)}
               className={styles.todo_done_icon}/>
     </div>
   );

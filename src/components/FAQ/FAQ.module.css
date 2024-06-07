@@ -9,7 +9,9 @@
 
 .faq_section {
   display: flex;
-  padding: 10px;
+  padding: 0 10px;
+  margin: -10px auto 0;
+  width: 90%;
 }
 
 .faq_item {
@@ -24,7 +26,7 @@
   background-color: rgba(253, 255, 254, 0.07);
   border-radius: 12px;
   padding: 32px 24px;
-  font-size: 2.4rem;
+  font-size: 2rem;
   transform: scale(0.9);
   margin: 0 auto;
 }

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styles from './TodoFrom.module.css';
 import { IoIosAdd, IoIosArrowDown } from 'react-icons/io';
+import { useTranslation } from 'react-i18next';
 
 function TodoForm({ addTodo, switchOrder }) {
   const [text, setText] = useState('');
@@ -8,6 +9,8 @@ function TodoForm({ addTodo, switchOrder }) {
 
   const rotate180Deg = { transform: 'rotate(180deg)' };
   const rotate0Deg = { transform: 'rotate(0deg)' };
+
+  const { t } = useTranslation();
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
@@ -18,10 +21,10 @@ function TodoForm({ addTodo, switchOrder }) {
   return (
     <div className={`${styles.todo_form_container} `}>
       <form onSubmit={onSubmitHandler}>
-        <input placeholder="Enter new todo..." type="text"
+        <input placeholder={t('Enter new todo...')} type="text"
                value={text} onChange={e => setText(e.target.value)}
                maxLength={50}/>
-        <button type="submit" title="Done">
+        <button type="submit" title={t('Done')}>
           <IoIosAdd className={styles.done_icon}/></button>
       </form>
 
@@ -31,7 +34,7 @@ function TodoForm({ addTodo, switchOrder }) {
       }}
                       className={`${styles.order_arrow_icon} `}
                       style={arrowUp ? rotate180Deg : rotate0Deg}
-                      title="Change Todos Order"
+                      title={t('Change todos order')}
       />
     </div>
 

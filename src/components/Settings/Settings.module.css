@@ -1,0 +1,44 @@
+.settings {
+  text-align: center;
+}
+
+.settings_items {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.title {
+  font-weight: 500;
+}
+
+.setting {
+
+}
+
+.setting {
+  cursor: pointer;
+  background-color: rgba(253, 255, 254, 0.2);
+  color: #FDFFFE;
+  font-size: 3rem;
+  transition: 0.3s;
+  user-select: none;
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  opacity: 0.5;
+}
+
+.setting:active {
+  color: #0069ff;
+  transform: scale(1.05);
+}
+
+@media (hover: hover) {
+  .setting:hover {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}

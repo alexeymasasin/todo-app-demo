@@ -28,4 +28,5 @@ The app will now be running at [http://localhost:3000/](http://localhost:3000/).
 - React Router
 - React Icons
 - Framer Motion
+- I18Next
 - UUID
