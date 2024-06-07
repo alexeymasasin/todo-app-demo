@@ -25,3 +25,9 @@ body {
     background-position: 0% 37%;
   }
 }
+
+@media (max-width: 650px) {
+  background-size: 100% 800%;
+  background-repeat: no-repeat;
+
+}

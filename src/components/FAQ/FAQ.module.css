@@ -2,6 +2,7 @@
   margin: 0 auto;
   text-align: center;
   max-width: 800px;
+  padding: 50px;
 }
 
 .faq_title {
@@ -10,16 +11,18 @@
 }
 
 .faq_left {
-  margin-right: 200px;
+  margin-right: auto;
+
 }
 
 .faq_right {
-  margin-left: 200px;
+  margin-left: auto;
 }
 
 .faq_left,
 .faq_right {
   transition: 0.5s;
+  width: 60%;
 }
 
 .faq_left:hover,
@@ -32,18 +35,54 @@
   background-color: rgba(253, 255, 254, 0.11);
   border-radius: 12px;
   padding: 12px 24px;
-  font-size: 2.6rem;
+  font-size: 2.2rem;
   text-align: left;
 }
 
 .faq_left > h3,
 .faq_right > h3 {
   width: 80%;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin: 16px auto 32px;
   font-weight: 400;
   background-color: rgba(0, 0, 0, 0.35);
   padding: 12px 24px;
   border-radius: 12px;
+}
 
+@media (max-width: 650px) {
+  .faq_left {
+    margin-right: auto;
+
+  }
+
+  .faq_right {
+    margin-left: auto;
+  }
+
+  .faq_left,
+  .faq_right {
+    transition: 0.5s;
+    width: 80%;
+  }
+
+  .faq_left > h2,
+  .faq_right > h2 {
+    background-color: rgba(253, 255, 254, 0.11);
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  .faq_left > h3,
+  .faq_right > h3 {
+    width: 80%;
+    font-size: 1.6rem;
+    margin: 16px auto 32px;
+    font-weight: 400;
+    background-color: rgba(0, 0, 0, 0.35);
+    padding: 12px 24px;
+    border-radius: 12px;
+  }
 }

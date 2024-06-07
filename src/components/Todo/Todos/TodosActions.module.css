@@ -7,3 +7,9 @@
   left: 0;
   right: 0;
 }
+
+@media (max-width: 650px) {
+  .actions_container {
+    top: 38px;
+  }
+}

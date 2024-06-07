@@ -1,14 +1,21 @@
 .sidebar {
   width: fit-content;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  position: fixed;
-  top: 8px;
-  left: 8px;
+  justify-content: center;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
 .sidebar_icon {
   font-size: 36px;
+}
+
+@media (max-width: 650px) {
+  .sidebar {
+    top: 90px;
+  }
 }
