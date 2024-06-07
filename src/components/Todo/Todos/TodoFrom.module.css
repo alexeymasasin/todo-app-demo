@@ -53,7 +53,7 @@
 }
 
 .order_arrow_icon {
-  margin: 10px 0 8px;
+  margin: 10px 0 6px;
   width: 30px;
   height: 30px;
   cursor: pointer;
@@ -62,12 +62,14 @@
   user-select: none;
 }
 
-.order_arrow_icon:hover {
-  color: #005bdc;
-}
+@media (hover: hover) {
+  .order_arrow_icon:hover {
+    color: #005bdc;
+  }
 
-.order_arrow_icon:active {
-  color: #0069ff;
+  .order_arrow_icon:active {
+    color: #0069ff;
+  }
 }
 
 @media (max-width: 650px) {
