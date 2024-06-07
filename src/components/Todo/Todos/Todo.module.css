@@ -9,7 +9,7 @@
   border: 2px solid #FDFFFE;
   color: #FDFFFE;
   background-color: rgba(253, 255, 254, 0.06);
-  transition: 0.3s
+  transition: 0.3s;
 }
 
 .completed_todo {

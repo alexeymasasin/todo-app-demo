@@ -4,11 +4,9 @@
   margin: 0;
   padding: 0;
   font-family: "Raleway", sans-serif;
-
 }
 
 body {
-  /*background-color: #091133;*/
   color: #FDFFFE;
   background: linear-gradient(-180deg, #091133, #091133, #0069ff);
   animation: gradient 14s ease-in-out infinite;

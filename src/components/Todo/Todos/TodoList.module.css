@@ -1,3 +1,11 @@
 .todo_list_container {
   padding: 0px 10px;
 }
+
+.is_todolist_empty {
+  position: absolute;
+  margin: -8px auto 0;
+  left: 0;
+  right: 0;
+  width: fit-content;
+}

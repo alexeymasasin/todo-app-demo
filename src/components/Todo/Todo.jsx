@@ -4,6 +4,7 @@ import styles from './Todo.module.css';
 import TodoForm from './Todos/TodoForm';
 import TodoList from './Todos/TodoList';
 import TodosActions from './Todos/TodosActions';
+import { AnimatePresence, motion } from 'framer-motion';
 
 function Todo() {
   const [todos, setTodos] = useState([]);
@@ -53,19 +54,32 @@ function Todo() {
 
   return (
     <div className={styles.todo}>
-      {!!todos.length && <TodosActions resetTodos={resetTodosHandler}
-                                       deleteCompletedTodos={deleteCompletedTodosHandler}
-                                       completedTodosExist={!!completedTodosCount}/>}
-      <h1>Todo App</h1>
+      <AnimatePresence>
+        {!!todos.length &&
+          <motion.div>
+            <TodosActions resetTodos={resetTodosHandler}
+                          deleteCompletedTodos={deleteCompletedTodosHandler}
+                          completedTodosExist={!!completedTodosCount}
+                          key="todos_actions"/>
+          </motion.div>
+        }
+      </AnimatePresence>
+      <h1 style={{ userSelect: 'none' }}>Todo App</h1>
       <TodoForm addTodo={addTodoHandler} switchOrder={todosOrderHandler}/>
       <TodoList deleteTodo={deleteTodoHandler} order={order} todos={todos}
                 toggleTodo={toggleTodoHandler}/>
-      {!!completedTodosCount &&
-        <h2>You have
-          completed {completedTodosCount} {completedTodosCount >
-          1
-            ? 'todos'
-            : 'todo'}</h2>}
+      <AnimatePresence mode="wait">
+        {!!completedTodosCount &&
+          <motion.h2 key="completed_todos_count"
+                     transition={{ duration: 0.3 }}
+                     initial={{ opacity: 0 }}
+                     animate={{ opacity: 1 }}
+                     exit={{ opacity: 0 }}>You have
+            completed {completedTodosCount} {completedTodosCount > 1
+              ? 'todos'
+              : 'todo'}</motion.h2>
+        }
+      </AnimatePresence>
     </div>
   );
 }

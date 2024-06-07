@@ -1,9 +1,6 @@
 import { useState } from 'react';
 import styles from './TodoFrom.module.css';
-import '../../../img/TodoForm/order-arrow.svg';
-import {
-  ReactComponent as OrderArrowIcon,
-} from '../../../img/TodoForm/order-arrow.svg';
+import { IoIosAdd, IoIosArrowDown } from 'react-icons/io';
 
 function TodoForm({ addTodo, switchOrder }) {
   const [text, setText] = useState('');
@@ -24,10 +21,11 @@ function TodoForm({ addTodo, switchOrder }) {
         <input placeholder="Enter new todo..." type="text"
                value={text} onChange={e => setText(e.target.value)}
                maxLength={50}/>
-        <button type="submit" title="Done">Done</button>
+        <button type="submit" title="Done">
+          <IoIosAdd className={styles.done_icon}/></button>
       </form>
 
-      <OrderArrowIcon onClick={() => {
+      <IoIosArrowDown onClick={() => {
         switchOrder();
         setArrowUp(!arrowUp);
       }}

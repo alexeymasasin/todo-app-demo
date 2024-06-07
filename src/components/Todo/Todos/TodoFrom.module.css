@@ -18,15 +18,23 @@
   outline: 3px #0069ff solid;
 }
 
+.done_icon {
+  font-size: 3rem;
+}
+
 .todo_form_container button {
   margin-left: 10px;
   height: 60px;
+  width: 60px;
   cursor: pointer;
   background-color: #0069ff;
   color: #FDFFFE;
   font-size: 1.3rem;
   transition: 0.3s;
   user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .todo_form_container button:hover {
@@ -39,20 +47,19 @@
 
 .todo_form_container input,
 .todo_form_container button {
-  padding: 10px 15px;
+  padding: 10px;
   border: none;
   border-radius: 12px;
 }
 
 .order_arrow_icon {
-  margin-top: 10px;
+  margin: 10px 0 8px;
   width: 30px;
   height: 30px;
   cursor: pointer;
   color: #FDFFFE;
   transition: 0.3s;
   user-select: none;
-  margin-bottom: 20px;
 }
 
 .order_arrow_icon:hover {
@@ -62,3 +69,4 @@
 .order_arrow_icon:active {
   color: #0069ff;
 }
+

@@ -6,6 +6,7 @@ import FAQ from './components/FAQ/FAQ';
 import './App.css';
 
 function App() {
+  document.body.style.zoom = '110%';
   return (
     <BrowserRouter basename="/todo-app-demo/">
       <div className="App">
