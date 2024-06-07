@@ -16,12 +16,6 @@
   opacity: 0.5;
 }
 
-.todo.completed_todo .todo_icon,
-.todo.completed_todo .todo_done_icon,
-.todo.completed_todo .todo_delete_icon {
-  color: #FDFFFE;
-}
-
 .todo_text {
   width: 100%;
   text-align: left;
@@ -33,6 +27,8 @@
   font-size: 1.8rem;
   margin-right: 10px;
   color: #FDFFFE;
+  transition: all 0.3s;
+  cursor: pointer;
 }
 
 .todo_done_icon {
@@ -45,6 +41,10 @@
   color: #FDFFFE;
   font-size: 1.8rem;
   transition: all 0.3s;
+}
+
+.important {
+  color: #f6c70c;
 }
 
 @media (hover: hover) {
