@@ -19,7 +19,8 @@ h1 {
 
   h1 {
     font-weight: 500;
-    font-size: 6rem;
-    margin: 0 0 26px;
+    font-size: 4.2rem;
+    padding: 10px;
+    margin: 4px 0 26px;
   }
 }
