@@ -39,7 +39,7 @@
   border-radius: 12px;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 1550px) {
   .faq_section {
     flex-direction: column;
   }

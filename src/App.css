@@ -14,13 +14,13 @@ h1 {
 
 @media (max-width: 650px) {
   .App {
-    padding: 150px 0;
+    padding: 140px 0;
   }
 
   h1 {
     font-weight: 500;
     font-size: 4.2rem;
     padding: 10px;
-    margin: 4px 0 26px;
+    margin: 4px 0 16px;
   }
 }

@@ -70,3 +70,12 @@
   color: #0069ff;
 }
 
+@media (max-width: 650px) {
+  .todo_form_container input {
+    width: 55%;
+  }
+
+  .order_arrow_icon {
+    margin: 14px 0 12px;
+  }
+}

@@ -16,10 +16,6 @@
   opacity: 0.5;
 }
 
-.completed_todo:hover {
-  opacity: 0.65
-}
-
 .todo.completed_todo .todo_icon,
 .todo.completed_todo .todo_done_icon,
 .todo.completed_todo .todo_delete_icon {
@@ -51,16 +47,45 @@
   transition: all 0.3s;
 }
 
-.todo_delete_icon:hover,
-.todo_done_icon:hover {
-  transform: scale(1.2);
+@media (hover: hover) {
+  .todo_delete_icon:hover,
+  .todo_done_icon:hover {
+    transform: scale(1.2);
+  }
+
+  .todo_delete_icon:hover {
+    color: #f62f0c;
+  }
+
+  .todo_done_icon:hover {
+    color: #47f60c;
+  }
+
+  .completed_todo:hover {
+    opacity: 0.65
+  }
 }
 
-.todo_delete_icon:hover {
-  color: #f62f0c;
-}
+@media (hover: none) {
+  .todo_delete_icon:hover,
+  .todo_done_icon:hover {
+    transform: scale(1);
+  }
 
-.todo_done_icon:hover {
-  color: #47f60c;
-}
+  .todo_delete_icon:hover {
+    color: inherit;
+  }
 
+  .todo_done_icon:hover {
+    color: inherit;
+  }
+
+  .completed_todo:hover {
+    opacity: 0.65
+  }
+
+  .todo {
+    width: 77%;
+    margin: 0 auto 15px;
+  }
+}
