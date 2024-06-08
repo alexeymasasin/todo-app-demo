@@ -10,13 +10,13 @@ function TodoList({ deleteTodo, order, todos, toggleTodo }) {
     <div className={styles.todo_list_container}>
       <AnimatePresence>
         {todos.length === 0 &&
-          <motion.h2 className={styles.is_todolist_empty}
+          <motion.h3 className={styles.is_todolist_empty}
                      key="is_todolist_empty"
                      transition={{ duration: 0.3, delay: 0.3 }}
                      initial={{ opacity: 0 }}
                      animate={{ opacity: 1 }}
                      exit={{ opacity: 0, transition: { delay: 0 } }}>
-            {t('Todo list is empty')}</motion.h2>}
+            {t('Todo list is empty')}</motion.h3>}
       </AnimatePresence>
       <AnimatePresence mode="popLayout">
         {

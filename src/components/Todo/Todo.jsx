@@ -5,6 +5,7 @@ import TodoForm from './Todos/TodoForm';
 import TodoList from './Todos/TodoList';
 import TodosActions from './Todos/TodosActions';
 import { AnimatePresence, motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 function Todo() {
   const [todos, setTodos] = useState([]);
@@ -38,6 +39,17 @@ function Todo() {
     }
   };
 
+  const todosDeclinationHandler = () => {
+    if (completedTodosCount % 10 === 1 && completedTodosCount % 100 !== 11) {
+      return t('TASKS_ONE');
+    } else if (completedTodosCount % 10 >= 2 && completedTodosCount % 10 <= 4 &&
+      (completedTodosCount % 100 < 10 || completedTodosCount % 100 >= 20)) {
+      return t('TASKS_FEW');
+    } else {
+      return t('TASKS_MANY');
+    }
+  };
+
   const deleteCompletedTodosHandler = () => {
     setTodos(todos.filter((todo) => !todo.isCompleted));
   };
@@ -50,18 +62,18 @@ function Todo() {
     }
   };
 
+  const { t } = useTranslation();
+
   const completedTodosCount = todos.filter((todo) => todo.isCompleted).length;
 
   return (
     <div className={styles.todo}>
       <AnimatePresence>
         {!!todos.length &&
-          <motion.div>
-            <TodosActions resetTodos={resetTodosHandler}
-                          deleteCompletedTodos={deleteCompletedTodosHandler}
-                          completedTodosExist={!!completedTodosCount}
-                          key="todos_actions"/>
-          </motion.div>
+          <TodosActions resetTodos={resetTodosHandler}
+                        deleteCompletedTodos={deleteCompletedTodosHandler}
+                        completedTodosExist={!!completedTodosCount}
+                        key="todos_actions"/>
         }
       </AnimatePresence>
       <h1 style={{ userSelect: 'none' }}>Todo App</h1>
@@ -70,14 +82,12 @@ function Todo() {
                 toggleTodo={toggleTodoHandler}/>
       <AnimatePresence mode="wait">
         {!!completedTodosCount &&
-          <motion.h2 key="completed_todos_count"
+          <motion.h3 key="completed_todos_count"
                      transition={{ duration: 0.3 }}
                      initial={{ opacity: 0 }}
                      animate={{ opacity: 1 }}
-                     exit={{ opacity: 0 }}>You have
-            completed {completedTodosCount} {completedTodosCount > 1
-              ? 'todos'
-              : 'todo'}</motion.h2>
+                     exit={{ opacity: 0 }}>{t(
+            'YOU_COMPLETED')} {completedTodosCount} {todosDeclinationHandler()}</motion.h3>
         }
       </AnimatePresence>
     </div>

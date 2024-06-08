@@ -11,11 +11,17 @@
   "HOW_TO": "Just type about anything into the task field and click 'Done' or press Enter - your task will instantly fall into your to-do list",
   "Is there any way to organise my tasks?": "Is there any way to organise my tasks?",
   "ORGANISING": "Certainly! Click the arrow below the task field and your tasks will be be sorted by old to new or vice versa. You can also mark your tasks as completed by clicking the check icon and delete them by clicking the trash can icon",
-  "Can I clear all my tasks quickly?": "'Can I clear all my tasks quickly?'",
+  "Can I clear all my tasks quickly?": "Can I clear all my tasks quickly?",
   "CLEAR_QUICKLY": "Yes! Once you add any task to the list and mark any of them as completed, two buttons will appear at the top of the page - they will allow you to reset all your tasks or clear completed ones",
   "OTHER_OPTIONS?": "Are there any other options in the application?",
   "OPTIONS": "Of course, among other things, you can mark tasks as more important by clicking the task icon",
   "DELETE_TODO": "Delete todo",
   "COMPLETE_TODO": "Mark as completed",
-  "IMPORTANT_TODO": "Отметить важной"
+  "IMPORTANT_TODO": "Mark as important",
+  "YOU_COMPLETED": "You have completed",
+  "TASKS_ONE": "todo",
+  "TASKS_FEW": "todos",
+  "TASKS_MANY": "todos",
+  "CLEAR_COMPLETED": "Clear completed todos",
+  "RESET_TODOS": "Reset todos"
 }

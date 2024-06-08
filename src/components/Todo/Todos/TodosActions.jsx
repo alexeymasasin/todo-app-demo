@@ -1,30 +1,27 @@
 import { GrClear, GrRefresh } from 'react-icons/gr';
-import { AnimatePresence, motion } from 'framer-motion';
-import { useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import Button from '../../UI/Button';
 import styles from './TodosActions.module.css';
+import { useTranslation } from 'react-i18next';
 
 function TodosActions({
   resetTodos,
   deleteCompletedTodos,
   completedTodosExist,
 }) {
-  const location = useLocation();
+  const { t } = useTranslation();
 
   return (
-    <div>
-      <AnimatePresence mode="wait">
-        <motion.div className={styles.actions_container} key={location.pathname}
-                    transition={{ duration: 0.3 }}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-          <Button title="Reset Todos" onClick={resetTodos}><GrRefresh/></Button>
-          <Button title="Clear Completed Todos"
-                  disabled={!completedTodosExist}
-                  onClick={deleteCompletedTodos}><GrClear/></Button>
-        </motion.div>
-      </AnimatePresence>
-    </div>
+    <motion.div className={styles.actions_container} key="actions_container"
+                transition={{ duration: 0.3 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+      <Button key="reset_todos" title={t('RESET_TODOS')}
+              onClick={resetTodos}><GrRefresh/></Button>
+      <Button key="clear_todos" title={t('CLEAR_COMPLETED')}
+              disabled={!completedTodosExist}
+              onClick={deleteCompletedTodos}><GrClear/></Button>
+    </motion.div>
   );
 }
 
