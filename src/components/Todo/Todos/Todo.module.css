@@ -6,8 +6,8 @@
   margin: 0 0 15px 0;
   font-size: 1.35rem;
   border-radius: 12px;
-  border: 2px solid #FDFFFE;
-  color: #FDFFFE;
+  border: 2px solid var(--text_color);
+  color: var(--text_color);
   background-color: rgba(253, 255, 254, 0.06);
   transition: 0.3s;
 }
@@ -26,7 +26,7 @@
 .todo_icon {
   font-size: 1.8rem;
   margin-right: 10px;
-  color: #FDFFFE;
+  color: var(--text_color);
   transition: all 0.3s;
   cursor: pointer;
 }
@@ -38,13 +38,20 @@
 .todo_delete_icon,
 .todo_done_icon {
   cursor: pointer;
-  color: #FDFFFE;
+  color: var(--text_color);
   font-size: 1.8rem;
   transition: all 0.3s;
 }
 
 .important {
   color: #f6b40c;
+}
+
+@media (max-width: 650px) {
+  .todo {
+    width: 77%;
+    margin: 0 auto 15px;
+  }
 }
 
 @media (hover: hover) {
@@ -68,29 +75,27 @@
   .todo_icon:hover {
     transform: scale(1.15);
   }
-
 }
 
 @media (hover: none) {
-  .todo_delete_icon:hover,
-  .todo_done_icon:hover {
-    transform: scale(1);
+  .todo_delete_icon:active
+  .todo_done_icon:active {
+    transform: scale(1.2);
   }
 
-  .todo_delete_icon:hover {
-    color: inherit;
+  .todo_delete_icon:active {
+    color: #f62f0c;
   }
 
-  .todo_done_icon:hover {
-    color: inherit;
+  .todo_done_icon:active {
+    color: #47f60c;
   }
 
-  .completed_todo:hover {
+  .completed_todo:active {
     opacity: 0.65
   }
 
-  .todo {
-    width: 77%;
-    margin: 0 auto 15px;
+  .todo_icon:active {
+    transform: scale(1.15);
   }
 }

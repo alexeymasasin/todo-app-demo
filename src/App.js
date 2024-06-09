@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Todo from './components/Todo/Todo';
-import Navbar from './components/Sidebar/Navbar';
+import Navbar from './components/Navbar/Navbar';
 import NotFound from './components/NotFound/NotFound';
 import FAQ from './components/FAQ/FAQ';
 import Settings from './components/Settings/Settings';

@@ -5,7 +5,7 @@
 .settings_items {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 8px;
 }
 
 .title {
@@ -13,13 +13,9 @@
 }
 
 .setting {
-
-}
-
-.setting {
   cursor: pointer;
-  background-color: rgba(253, 255, 254, 0.2);
-  color: #FDFFFE;
+  background-color: transparent;
+  color: var(--text_color);
   font-size: 3rem;
   transition: 0.3s;
   user-select: none;
@@ -28,11 +24,11 @@
   border-radius: 12px;
   display: flex;
   align-items: center;
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 .setting:active {
-  color: #0069ff;
+  color: var(--text_secondary);
   transform: scale(1.05);
 }
 

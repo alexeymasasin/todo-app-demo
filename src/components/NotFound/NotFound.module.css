@@ -11,14 +11,14 @@
 
 .go_home {
   font-size: 3rem;
-  color: #FDFFFE;
+  color: var(--text_color);
   opacity: 0.85;
   text-decoration: none;
   transition: 0.3s;
 }
 
 .go_home:hover {
-  color: #0069ff;
+  color: var(--text_secondary);
   opacity: 1;
   transform: scale(1.05);
 }

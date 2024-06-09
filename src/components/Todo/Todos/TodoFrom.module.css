@@ -1,44 +1,49 @@
-.todo_form_container {
-}
-
 .todo_form_container form {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 1
 }
 
 .todo_form_container input {
   width: 45%;
   height: 40px;
   font-size: 1.3rem;
-  background-color: #FDFFFE;
+  background-color: var(--white);
+  border: 3px var(--text_color) solid;
+  padding: 7px;
+  transition: 0.3s;
 }
 
 .todo_form_container input:focus {
-  outline: 3px #0069ff solid;
-}
-
-.done_icon {
-  font-size: 3rem;
+  border: 3px var(--text_secondary) solid;
+  outline: none
 }
 
 .todo_form_container button {
-  margin-left: 10px;
-  height: 60px;
+  margin-left: 8px;
   width: 60px;
+  height: 60px;
   cursor: pointer;
-  background-color: #0069ff;
-  color: #FDFFFE;
+  background-color: var(--text_secondary);
+  border: 3px var(--text_secondary) solid;
+  color: var(--text_color);
   font-size: 1.3rem;
   transition: 0.3s;
   user-select: none;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px;
+}
+
+.done_icon {
+  font-size: 3rem;
+  color: var(--white);
 }
 
 .todo_form_container button:hover {
-  background-color: #005bdc;
+  background-color: var(--text_secondary);
 }
 
 .todo_form_container button:active {
@@ -47,28 +52,28 @@
 
 .todo_form_container input,
 .todo_form_container button {
-  padding: 10px;
-  border: none;
   border-radius: 12px;
 }
 
 .order_arrow_icon {
-  margin: 10px 0 6px;
+  margin: 10px 0 8px;
   width: 30px;
   height: 30px;
   cursor: pointer;
-  color: #FDFFFE;
+  color: var(--text_color);
   transition: 0.3s;
   user-select: none;
+  opacity: 0.8;
+}
+
+.order_arrow_icon:active {
+  color: var(--text_secondary);
+  opacity: 1;
 }
 
 @media (hover: hover) {
   .order_arrow_icon:hover {
-    color: #005bdc;
-  }
-
-  .order_arrow_icon:active {
-    color: #0069ff;
+    opacity: 1;
   }
 }
 

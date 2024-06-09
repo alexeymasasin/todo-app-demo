@@ -1,7 +1,7 @@
 .button {
   cursor: pointer;
   background-color: transparent;
-  color: #FDFFFE;
+  color: var(--text_color);
   font-size: 1.6rem;
   transition: 0.3s;
   user-select: none;
@@ -10,12 +10,14 @@
   border-radius: 12px;
   display: flex;
   align-items: center;
-  opacity: 0.5;
+  opacity: 0.65;
 }
 
 .button:active {
-  color: #0069ff;
+  color: var(--text_secondary);
   transform: scale(1.05);
+  opacity: 1;
+  
 }
 
 .button:disabled {

@@ -1,12 +1,13 @@
 <h1> Todo App (React.js) </h1>
 
 <p>
-Simple todo list web app to save and manage your tasks
+A simple todo-list web application developed & designed by me to help you stay organized and manage your
+day-to-day tasks by keeping your tasks right in the browser tab
 </p>
 
 ## Current Release
 
-App is available on [GitHub Pages](https://alexeymasasin.github.io/todo-app-demo/)
+App is available on this [GitHub Pages Link](https://alexeymasasin.github.io/todo-app-demo/)
 
 ## Local Installation
 
@@ -30,3 +31,8 @@ The app will now be running at [http://localhost:3000/](http://localhost:3000/).
 - Framer Motion
 - I18Next
 - UUID
+
+## Functionality
+
+- Dark / light mode switcher
+- Language switcher (RU/EN)

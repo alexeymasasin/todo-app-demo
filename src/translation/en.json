@@ -1,6 +1,8 @@
 {
   "Settings": "Settings",
-  "Change language to Russian": "Change language to Russian",
+  "CHANGE_LANGUAGE": "Change language to Russian",
+  "TURN_DARK": "Turn on dark theme",
+  "TURN_LIGHT": "Turn on light theme",
   "Todo list is empty": "Todo list is empty",
   "Enter new todo...": "Enter new todo...",
   "Done": "Done",
