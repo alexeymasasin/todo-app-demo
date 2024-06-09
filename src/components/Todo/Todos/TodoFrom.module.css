@@ -10,7 +10,7 @@
   height: 40px;
   font-size: 1.3rem;
   color: var(--text_color);
-  background-color: var(--bg_color);
+  background-color: var(--white);
   border: 3px var(--text_color) solid;
   padding: 7px;
   transition: 0.3s;

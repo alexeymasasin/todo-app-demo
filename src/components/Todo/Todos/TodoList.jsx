@@ -3,7 +3,7 @@ import styles from './TodoList.module.css';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
-function TodoList({ deleteTodo, order, todos, toggleTodo }) {
+function TodoList({ importantTodo, deleteTodo, order, todos, toggleTodo }) {
   const { t } = useTranslation();
 
   return (
@@ -30,7 +30,8 @@ function TodoList({ deleteTodo, order, todos, toggleTodo }) {
                             opacity: 0,
                             transition: { delay: 0, type: 'spring' },
                           }}>
-                <Todo deleteTodo={deleteTodo} todo={todo} key={todo.id}
+                <Todo importantTodo={importantTodo} deleteTodo={deleteTodo}
+                      todo={todo} key={todo.id}
                       toggleTodo={toggleTodo}/>
               </motion.div>
             ))
@@ -40,7 +41,8 @@ function TodoList({ deleteTodo, order, todos, toggleTodo }) {
                           animate={{ opacity: 1 }}
                           key={todo.id}
                           exit={{ opacity: 0, transition: { delay: 0 } }}>
-                <Todo deleteTodo={deleteTodo} todo={todo} key={todo.id}
+                <Todo importantTodo={importantTodo} deleteTodo={deleteTodo}
+                      todo={todo} key={todo.id}
                       toggleTodo={toggleTodo}/>
               </motion.div>
             )).reverse()

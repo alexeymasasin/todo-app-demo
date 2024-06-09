@@ -28,6 +28,7 @@ function Todo() {
     const newTodo = {
       text,
       isCompleted: false,
+      isImportant: false,
       id: uuidv4(),
     };
     newTodo.text.trim().length > 1 && setTodos([...todos, newTodo]);
@@ -40,6 +41,13 @@ function Todo() {
   const toggleTodoHandler = (id) => {
     setTodos(todos.map(todo => todo.id === id
       ? { ...todo, isCompleted: !todo.isCompleted }
+      : { ...todo },
+    ));
+  };
+
+  const importantTodoHandler = (id) => {
+    setTodos(todos.map(todo => todo.id === id
+      ? { ...todo, isImportant: !todo.isImportant }
       : { ...todo },
     ));
   };
@@ -92,7 +100,8 @@ function Todo() {
                 key="todo_form"/>
       <AnimatePresence mode="wait">
         <TodoList deleteTodo={deleteTodoHandler} order={order} todos={todos}
-                  toggleTodo={toggleTodoHandler} key="todo_list"/>
+                  toggleTodo={toggleTodoHandler}
+                  importantTodo={importantTodoHandler} key="todo_list"/>
         <motion.div layout transition={{ duration: 0.3, delay: 0.15 }}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
