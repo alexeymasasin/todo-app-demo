@@ -30,13 +30,28 @@ function Settings() {
     }
   };
 
+  const setDarkTheme = () => document.querySelector('body')
+    .setAttribute('data-theme', 'dark');
+  const setLightTheme = () => document.querySelector('body')
+    .setAttribute('data-theme', 'light');
+
   const themeChangeHandler = () => {
     if (themeDataHandler() === 'dark') {
-      document.querySelector('body').setAttribute('data-theme', 'light');
+      setLightTheme();
+      localStorage.setItem('selectedTheme', 'light');
     } else {
-      document.querySelector('body').setAttribute('data-theme', 'dark');
+      setDarkTheme();
+      localStorage.setItem('selectedTheme', 'dark');
     }
   };
+
+  const selectedTheme = localStorage.getItem('selectedTheme');
+
+  if (selectedTheme === 'dark') {
+    setDarkTheme();
+  } else if (selectedTheme === 'light') {
+    setLightTheme();
+  }
 
   return (
     <div className={styles.settings}>

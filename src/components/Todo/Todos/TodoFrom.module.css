@@ -9,7 +9,8 @@
   width: 45%;
   height: 40px;
   font-size: 1.3rem;
-  background-color: var(--white);
+  color: var(--text_color);
+  background-color: var(--bg_color);
   border: 3px var(--text_color) solid;
   padding: 7px;
   transition: 0.3s;
@@ -42,10 +43,6 @@
   color: var(--white);
 }
 
-.todo_form_container button:hover {
-  background-color: var(--text_secondary);
-}
-
 .todo_form_container button:active {
   transform: scale(0.95);
 }
@@ -75,6 +72,12 @@
   .order_arrow_icon:hover {
     opacity: 1;
   }
+
+  .todo_form_container button:hover {
+    background-color: var(--text_tertiary);
+    border-color: var(--text_tertiary);
+  }
+
 }
 
 @media (max-width: 650px) {

@@ -10,11 +10,20 @@ h1 {
   font-weight: 500;
   font-size: 6rem;
   margin: 0 0 20px;
+  color: var(--text_color);
+  transition: 0.3s;
+}
+
+h2 {
+  color: var(--text_color);
+  transition: 0.3s;
 }
 
 h3 {
   font-weight: 400;
   font-size: 1.6rem;
+  color: var(--text_color);
+  transition: 0.3s;
 }
 
 @media (max-width: 650px) {
