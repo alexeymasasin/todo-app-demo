@@ -1,7 +1,7 @@
 <h1> Todo App (React.js) </h1>
 
 <p>
-A simple todo-list web application developed & designed by me to help you stay organized and manage your
+Welcome to my Todo App – a simple todo-list web application developed & designed by me to help you stay organized and manage your
 day-to-day tasks by keeping your tasks right in the browser tab
 </p>
 
@@ -34,5 +34,8 @@ The app will now be running at [http://localhost:3000/](http://localhost:3000/).
 
 ## Functionality
 
-- Dark / light mode switcher
-- Language switcher (RU/EN)
+- Saving all tasks and their state in local storage
+- Add & remove task
+- Mark a task as completed & important
+- Switch between dark & light UI
+- Switch between languages (RU & EN)
