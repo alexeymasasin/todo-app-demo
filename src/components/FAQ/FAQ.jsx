@@ -35,6 +35,10 @@ function FAQ() {
           <h2><TbMessageCircleQuestion/> {t('OTHER_OPTIONS?')}</h2>
           <h3>{t('OPTIONS')}</h3>
         </div>
+        <div className={styles.faq_item}>
+          <h2><TbMessageCircleQuestion/> {t('CAN_SAVE?')}</h2>
+          <h3>{t('SAVING')}</h3>
+        </div>
       </div>
     </div>
   );

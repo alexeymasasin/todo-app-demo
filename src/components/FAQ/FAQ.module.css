@@ -10,12 +10,14 @@
 .faq_section {
   display: flex;
   padding: 0 10px;
+  flex-direction: column;
   margin: -10px auto 0;
-  width: 90%;
 }
 
 .faq_item {
   transition: 0.5s;
+  width: 50%;
+  margin: 0 auto;
 }
 
 .faq_item:hover {
@@ -41,11 +43,7 @@
   border-radius: 12px;
 }
 
-@media (max-width: 1550px) {
-  .faq_section {
-    flex-direction: column;
-  }
-
+@media (max-width: 1200px) {
   .faq_item {
     width: 90%;
     margin: 0 auto;

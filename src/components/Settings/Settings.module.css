@@ -5,7 +5,7 @@
 .settings_items {
   display: flex;
   justify-content: center;
-  gap: 8px;
+  gap: 16px;
 }
 
 .title {
@@ -16,11 +16,11 @@
   cursor: pointer;
   background-color: transparent;
   color: var(--text_color);
-  font-size: 3rem;
+  font-size: 4rem;
   transition: 0.3s;
   user-select: none;
   padding: 10px;
-  border: none;
+  border: 3px solid var(--text_color);
   border-radius: 12px;
   display: flex;
   align-items: center;

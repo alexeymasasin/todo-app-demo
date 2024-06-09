@@ -25,5 +25,7 @@
   "TASKS_FEW": "todos",
   "TASKS_MANY": "todos",
   "CLEAR_COMPLETED": "Clear completed todos",
-  "RESET_TODOS": "Reset todos"
+  "RESET_TODOS": "Reset todos",
+  "CAN_SAVE?": "Can i save my tasks?",
+  "SAVING": "Yes, all your tasks are saved in your browser local storage. In future releases, I'll also add .JSON \"import-export\" functionality to keep your todos safe"
 }

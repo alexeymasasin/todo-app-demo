@@ -87,19 +87,31 @@ function Todo() {
                         key="todos_actions"/>
         }
       </AnimatePresence>
-      <h1 style={{ userSelect: 'none' }}>Todo App</h1>
-      <TodoForm addTodo={addTodoHandler} switchOrder={todosOrderHandler}/>
-      <TodoList deleteTodo={deleteTodoHandler} order={order} todos={todos}
-                toggleTodo={toggleTodoHandler}/>
+      <h1 style={{ userSelect: 'none' }} key="title">Todo App</h1>
+      <TodoForm addTodo={addTodoHandler} switchOrder={todosOrderHandler}
+                key="todo_form"/>
       <AnimatePresence mode="wait">
-        {!!completedTodosCount &&
-          <motion.h3 key="completed_todos_count"
-                     transition={{ duration: 0.3 }}
-                     initial={{ opacity: 0 }}
-                     animate={{ opacity: 1 }}
-                     exit={{ opacity: 0 }}>{t(
-            'YOU_COMPLETED')} {completedTodosCount} {todosDeclinationHandler()}</motion.h3>
-        }
+        <TodoList deleteTodo={deleteTodoHandler} order={order} todos={todos}
+                  toggleTodo={toggleTodoHandler} key="todo_list"/>
+        <motion.div layout transition={{ duration: 0.3, delay: 0.15 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    key="todo_list_container"
+                    exit={{
+                      opacity: 0,
+                      transition: { delay: 0.3, type: 'spring' },
+                    }}>
+          {!!completedTodosCount &&
+            <motion.h3 key="completed_todos_count"
+                       className={styles.completed_todos}
+                       transition={{ duration: 0.3 }}
+                       initial={{ opacity: 0 }}
+                       animate={{ opacity: 1 }}
+                       exit={{ opacity: 0 }}>{t(
+              'YOU_COMPLETED')} {completedTodosCount} {todosDeclinationHandler()}
+            </motion.h3>
+          }
+        </motion.div>
       </AnimatePresence>
     </div>
   );
