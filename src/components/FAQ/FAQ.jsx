@@ -1,8 +1,11 @@
 import styles from './FAQ.module.css';
 import { TbMessageCircleQuestion } from 'react-icons/tb';
 import { useTranslation } from 'react-i18next';
+import useDocumentTitle from '../../hooks/useDocumentTitle';
 
 function FAQ() {
+  useDocumentTitle('FAQ');
+
   const { t } = useTranslation();
 
   return (

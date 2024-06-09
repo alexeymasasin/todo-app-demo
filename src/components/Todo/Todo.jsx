@@ -6,8 +6,11 @@ import TodoList from './Todos/TodoList';
 import TodosActions from './Todos/TodosActions';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import useDocumentTitle from '../../hooks/useDocumentTitle';
 
 function Todo() {
+  useDocumentTitle('Home');
+
   const [todos, setTodos] = useState([]);
   const [order, setOrder] = useState('DOWN');
 

@@ -10,13 +10,12 @@ function App() {
   document.body.style.zoom = '110%';
 
   return (
-    <BrowserRouter basename="/todo-app-demo/">
+    <BrowserRouter basename="/todo-app-demo">
       <div className="App">
         <Navbar/>
         <Routes>
           <Route path="*" element={<NotFound/>}/>
           <Route path="/" element={<Todo/>}/>
-          <Route path="/todo" element={<Todo/>}/>
           <Route path="/faq" element={<FAQ/>}/>
           <Route path="/settings" element={<Settings/>}/>
         </Routes>

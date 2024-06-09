@@ -13,7 +13,7 @@ function Navbar(props) {
 
   return (
     <div className={styles.sidebar}>
-      <NavLink to="/todo"
+      <NavLink to="/" end
                className={({ isActive }) => isActive
                  ? ` ${styles.active}`
                  : ''}>

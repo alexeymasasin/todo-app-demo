@@ -3,8 +3,11 @@ import { useTranslation } from 'react-i18next';
 import useLocalStorage from './../../hooks/useLocalStorate';
 import i18n from './../../i18n';
 import { IoLanguageSharp } from 'react-icons/io5';
+import useDocumentTitle from '../../hooks/useDocumentTitle';
 
 function Settings() {
+  useDocumentTitle('Settings');
+
   const { t } = useTranslation();
   const [language, setLanguage] = useLocalStorage('language', 'ru');
 
