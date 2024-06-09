@@ -9,6 +9,19 @@ import './App.css';
 function App() {
   document.body.style.zoom = '110%';
 
+  const setDarkTheme = () => document.querySelector('body')
+    .setAttribute('data-theme', 'dark');
+  const setLightTheme = () => document.querySelector('body')
+    .setAttribute('data-theme', 'light');
+
+  const selectedTheme = localStorage.getItem('selectedTheme');
+
+  if (selectedTheme === 'dark') {
+    setDarkTheme();
+  } else if (selectedTheme === 'light') {
+    setLightTheme();
+  }
+
   return (
     <BrowserRouter basename="/todo-app-demo">
       <div className="App">

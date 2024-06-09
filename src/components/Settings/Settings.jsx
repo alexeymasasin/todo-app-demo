@@ -35,6 +35,14 @@ function Settings() {
   const setLightTheme = () => document.querySelector('body')
     .setAttribute('data-theme', 'light');
 
+  const selectedTheme = localStorage.getItem('selectedTheme');
+
+  if (selectedTheme === 'dark') {
+    setDarkTheme();
+  } else if (selectedTheme === 'light') {
+    setLightTheme();
+  }
+
   const themeChangeHandler = () => {
     if (themeDataHandler() === 'dark') {
       setLightTheme();
@@ -44,14 +52,6 @@ function Settings() {
       localStorage.setItem('selectedTheme', 'dark');
     }
   };
-
-  const selectedTheme = localStorage.getItem('selectedTheme');
-
-  if (selectedTheme === 'dark') {
-    setDarkTheme();
-  } else if (selectedTheme === 'light') {
-    setLightTheme();
-  }
 
   return (
     <div className={styles.settings}>

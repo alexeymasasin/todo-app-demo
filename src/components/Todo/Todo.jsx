@@ -1,18 +1,28 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import styles from './Todo.module.css';
 import TodoForm from './Todos/TodoForm';
 import TodoList from './Todos/TodoList';
 import TodosActions from './Todos/TodosActions';
-import { AnimatePresence, motion } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
 import useDocumentTitle from '../../hooks/useDocumentTitle';
 
 function Todo() {
   useDocumentTitle('Home');
 
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(
+    () => JSON.parse(localStorage.getItem('todos')) || []);
   const [order, setOrder] = useState('DOWN');
+
+  useEffect(() => {
+    const storedTodos = JSON.parse(localStorage.getItem('todos')) || [];
+    setTodos(storedTodos);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
 
   const addTodoHandler = (text) => {
     const newTodo = {
@@ -37,8 +47,6 @@ function Todo() {
   const resetTodosHandler = () => {
     if (window.confirm('Are you sure you want to delete all of your todos?')) {
       setTodos([]);
-    } else {
-
     }
   };
 
@@ -65,9 +73,9 @@ function Todo() {
     }
   };
 
-  const { t } = useTranslation();
-
   const completedTodosCount = todos.filter((todo) => todo.isCompleted).length;
+
+  const { t } = useTranslation();
 
   return (
     <div className={styles.todo}>

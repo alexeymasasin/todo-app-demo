@@ -23,7 +23,7 @@ function TodoForm({ addTodo, switchOrder }) {
       <form onSubmit={onSubmitHandler}>
         <input placeholder={t('Enter new todo...')} type="text"
                value={text} onChange={e => setText(e.target.value)}
-               maxLength={50}/>
+               maxLength="30"/>
         <button type="submit" title={t('Done')}>
           <IoIosAdd className={styles.done_icon}/></button>
       </form>
