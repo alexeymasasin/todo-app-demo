@@ -17,7 +17,7 @@ function Navbar(props) {
                className={({ isActive }) => isActive
                  ? ` ${styles.active}`
                  : ''}>
-        <Button title="Todo"><RiStickyNoteLine
+        <Button title="TodoApp"><RiStickyNoteLine
           className={styles.sidebar_icon}/></Button>
       </NavLink>
 

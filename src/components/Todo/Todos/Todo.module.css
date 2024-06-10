@@ -12,7 +12,7 @@
   transition: 0.3s;
 }
 
-.completed_todo {
+.completed {
   opacity: 0.5;
 }
 
@@ -94,7 +94,7 @@
   }
 
   .todo_done_icon:hover {
-    color: #47f60c;
+    color: green;
   }
 
   .completed_todo:hover {
@@ -107,7 +107,7 @@
 }
 
 @media (hover: none) {
-  .todo_delete_icon:active
+  .todo_delete_icon:active,
   .todo_done_icon:active {
     transform: scale(1.2);
   }

@@ -2,50 +2,77 @@ import Todo from './Todo';
 import styles from './TodoList.module.css';
 import { AnimatePresence, motion, Reorder } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { useRef } from 'react';
 
 function TodoList({
   importantTodo,
+  completedTodosCount,
   deleteTodo,
   todos,
   hidden,
   setTodos,
   toggleTodo,
 }) {
+
+  const todosDeclinationHandler = () => {
+    if (completedTodosCount % 10 === 1 && completedTodosCount % 100 !== 11) {
+      return t('TASKS_ONE');
+    } else if (completedTodosCount % 10 >= 2 && completedTodosCount % 10 <= 4 &&
+      (completedTodosCount % 100 < 10 || completedTodosCount % 100 >= 20)) {
+      return t('TASKS_FEW');
+    } else {
+      return t('TASKS_MANY');
+    }
+  };
+
   const { t } = useTranslation();
 
+  const constraintsRef = useRef(null);
+
   return (
-    <div className={styles.todo_list_container}>
-      <AnimatePresence>
+    <div ref={constraintsRef} className={styles.todo_list_container}>
+      <AnimatePresence mode="wait">
         {todos.length === 0 &&
           <motion.h3 className={styles.is_todolist_empty}
                      key="is_todolist_empty"
-                     transition={{ duration: 0.3, delay: 0.3 }}
+                     transition={{ duration: 0.3, delay: 0.5 }}
                      initial={{ opacity: 0 }}
                      animate={{ opacity: 1 }}
                      exit={{
-                       opacity: 0,
-                       transition: { delay: 0.3 },
-                     }}>
-            {t('Todo list is empty')}</motion.h3>}
+                       opacity: 0, transition: { delay: 0 },
+                     }}>{t('TodoApp list is empty')}</motion.h3>}
       </AnimatePresence>
-      <AnimatePresence mode="popLayout">
-        <Reorder.Group axis="y" values={todos} onReorder={setTodos}
-                       key="reorder_when_down">
-          {hidden ? '' : todos.map((todo) => (
-            <Reorder.Item layout value={todo} key={todo.id}>
-              <motion.div transition={{ duration: 0.2, delay: 0.2 }}
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          key={todo.id}
-                          exit={{ opacity: 0, transition: { delay: 0.2 } }}>
-                <Todo importantTodo={importantTodo} deleteTodo={deleteTodo}
-                      todo={todo} key={todo.id}
-                      toggleTodo={toggleTodo}/>
-              </motion.div>
+      <Reorder.Group axis="y" values={todos} onReorder={setTodos}
+                     key="reorder_when_down">
+        <AnimatePresence>
+          {hidden ? null : todos.map((todo) => (
+            <Reorder.Item value={todo} key={todo.id}
+                          dragConstraints={constraintsRef}
+                          dragTransition={{
+                            bounceStiffness: 300,
+                            bounceDamping: 50,
+                          }}
+                          whileHover={{ scale: 1.025 }}>
+              <Todo importantTodo={importantTodo} deleteTodo={deleteTodo}
+                    todo={todo} key={todo.id}
+                    toggleTodo={toggleTodo}/>
             </Reorder.Item>
           ))}
-        </Reorder.Group>
-      </AnimatePresence>
+        </AnimatePresence>
+        <AnimatePresence>
+          {!!completedTodosCount &&
+            <motion.h3 key="completed_todos_count"
+                       initial={{ opacity: 0 }}
+                       animate={{ opacity: 1 }}
+                       exit={{ opacity: 0, transition: { delay: 0.2 } }}>
+              {t(
+                'YOU_COMPLETED')} {completedTodosCount} {todosDeclinationHandler()}
+            </motion.h3>
+          }
+        </AnimatePresence>
+      </Reorder.Group>
+
+
     </div>
   );
 }

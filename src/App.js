@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Todo from './components/Todo/Todo';
+import TodoApp from './components/Todo/TodoApp';
 import Navbar from './components/Navbar/Navbar';
 import NotFound from './components/NotFound/NotFound';
 import FAQ from './components/FAQ/FAQ';
@@ -28,7 +28,7 @@ function App() {
         <Navbar/>
         <Routes>
           <Route path="*" element={<NotFound/>}/>
-          <Route path="/" element={<Todo/>}/>
+          <Route path="/" element={<TodoApp/>}/>
           <Route path="/faq" element={<FAQ/>}/>
           <Route path="/settings" element={<Settings/>}/>
         </Routes>
