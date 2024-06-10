@@ -1,17 +1,21 @@
-import styles from './NotFound.module.css';
 import { NavLink } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import styles from './NotFound.module.css';
 import useDocumentTitle from '../../hooks/useDocumentTitle';
 
 function NotFound() {
   useDocumentTitle('Not Found');
 
   return (
-    <div className={styles.not_found}>
+    <motion.div className={styles.not_found} initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}>
       <h1 className={styles.not_found_title}>Page Not Found</h1>
       <NavLink to="/" className={styles.go_home}>
         Go to Home
       </NavLink>
-    </div>
+    </motion.div>
   );
 }
 

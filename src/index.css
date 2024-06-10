@@ -6,24 +6,60 @@
   --text_tertiary: #1875ff;
   --bg_color: #091133;
   --white: #FDFFFE;
+  --input-bgc: #FDFFFE;
+  --input-text: #091133;
 }
 
 [data-theme="dark"] {
   --text_color: #FDFFFE;
   --text_secondary: #0069ff;
   --bg_color: #091133;
+  --input-bgc: #FDFFFE;
+  --input-text: #091133;
 }
 
 [data-theme="light"] {
   --text_color: #091133;
   --text_secondary: #0069ff;
   --bg_color: #e3e7ff;
+  --input-text: #091133;
+  --input-bgc: transparent !important;
 }
 
 * {
   margin: 0;
   padding: 0;
   font-family: "Raleway", sans-serif;
+}
+
+/*width */
+
+::-webkit-scrollbar {
+  width: 12px;
+  transition: all 0.3s;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  background: var(--input-text);
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text_secondary);
+}
+
+html {
+  overflow-y: scroll;
 }
 
 body {

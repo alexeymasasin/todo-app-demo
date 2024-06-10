@@ -22,25 +22,22 @@ function TodoList({ importantTodo, deleteTodo, order, todos, toggleTodo }) {
         {
           order === 'DOWN'
             ? todos.map((todo) => (
-              <motion.div layout transition={{ duration: 0.3, delay: 0.3 }}
+              <motion.div layout transition={{ duration: 0.2, delay: 0.2 }}
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           key={todo.id}
-                          exit={{
-                            opacity: 0,
-                            transition: { delay: 0, type: 'spring' },
-                          }}>
+                          exit={{ opacity: 0, transition: { delay: 0.2 } }}>
                 <Todo importantTodo={importantTodo} deleteTodo={deleteTodo}
                       todo={todo} key={todo.id}
                       toggleTodo={toggleTodo}/>
               </motion.div>
             ))
             : todos.map((todo) => (
-              <motion.div layout transition={{ duration: 0.3, delay: 0.3 }}
+              <motion.div layout transition={{ duration: 0.2, delay: 0.2 }}
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           key={todo.id}
-                          exit={{ opacity: 0, transition: { delay: 0 } }}>
+                          exit={{ opacity: 0, transition: { delay: 0.2 } }}>
                 <Todo importantTodo={importantTodo} deleteTodo={deleteTodo}
                       todo={todo} key={todo.id}
                       toggleTodo={toggleTodo}/>
