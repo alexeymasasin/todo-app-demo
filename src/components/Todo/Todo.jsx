@@ -13,7 +13,7 @@ function Todo() {
 
   const [todos, setTodos] = useState(
     () => JSON.parse(localStorage.getItem('todos')) || []);
-  const [order, setOrder] = useState('DOWN');
+  const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
     const storedTodos = JSON.parse(localStorage.getItem('todos')) || [];
@@ -73,12 +73,8 @@ function Todo() {
     setTodos(todos.filter((todo) => !todo.isCompleted));
   };
 
-  const todosOrderHandler = () => {
-    if (order === 'DOWN') {
-      setOrder('UP');
-    } else {
-      setOrder('DOWN');
-    }
+  const hideTodosHandler = () => {
+    setHidden(!hidden);
   };
 
   const completedTodosCount = todos.filter((todo) => todo.isCompleted).length;
@@ -99,9 +95,11 @@ function Todo() {
         }
       </AnimatePresence>
       <h1 style={{ userSelect: 'none' }} key="title">Todo App</h1>
-      <TodoForm addTodo={addTodoHandler} switchOrder={todosOrderHandler}
+      <TodoForm addTodo={addTodoHandler} hideTodos={hideTodosHandler}
+                hidden={hidden}
                 key="todo_form"/>
-      <TodoList deleteTodo={deleteTodoHandler} order={order} todos={todos}
+      <TodoList deleteTodo={deleteTodoHandler} todos={todos} hidden={hidden}
+                setTodos={setTodos}
                 toggleTodo={toggleTodoHandler}
                 importantTodo={importantTodoHandler} key="todo_list"/>
       <AnimatePresence mode="wait">

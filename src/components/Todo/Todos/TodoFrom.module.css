@@ -1,27 +1,27 @@
-.todo_form_container form {
+.container form {
   display: flex;
   align-items: center;
   justify-content: center;
   flex: 1
 }
 
-.todo_form_container input {
+.container input {
   width: 45%;
   height: 40px;
   font-size: 1.3rem;
   color: var(--input-text);
   background-color: var(--input-bgc);
   border: 3px var(--text_color) solid;
-  padding: 7px;
+  padding: 7px 14px;
   transition: 0.3s;
 }
 
-.todo_form_container input:focus {
+.container input:focus {
   border: 3px var(--text_secondary) solid;
   outline: none
 }
 
-.todo_form_container button {
+.container button {
   margin-left: 8px;
   width: 60px;
   height: 60px;
@@ -43,16 +43,16 @@
   color: var(--white);
 }
 
-.todo_form_container button:active {
+.container button:active {
   transform: scale(0.95);
 }
 
-.todo_form_container input,
-.todo_form_container button {
+.container input,
+.container button {
   border-radius: 12px;
 }
 
-.order_arrow_icon {
+.arrow_icon {
   margin: 10px 0 8px;
   width: 30px;
   height: 30px;
@@ -63,17 +63,17 @@
   opacity: 0.8;
 }
 
-.order_arrow_icon:active {
+.arrow_icon:active {
   color: var(--text_secondary);
   opacity: 1;
 }
 
 @media (hover: hover) {
-  .order_arrow_icon:hover {
+  .arrow_icon:hover {
     opacity: 1;
   }
 
-  .todo_form_container button:hover {
+  .container button:hover {
     background-color: var(--text_tertiary);
     border-color: var(--text_tertiary);
   }
@@ -81,11 +81,11 @@
 }
 
 @media (max-width: 650px) {
-  .todo_form_container input {
+  .container input {
     width: 55%;
   }
 
-  .order_arrow_icon {
+  .arrow_icon {
     margin: 14px 0 10px;
   }
 }

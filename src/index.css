@@ -8,6 +8,7 @@
   --white: #FDFFFE;
   --input-bgc: #FDFFFE;
   --input-text: #091133;
+  --important-todo: #f6b40c;
 }
 
 [data-theme="dark"] {
@@ -16,6 +17,7 @@
   --bg_color: #091133;
   --input-bgc: #FDFFFE;
   --input-text: #091133;
+  --important-todo: #f6b40c;
 }
 
 [data-theme="light"] {
@@ -24,6 +26,7 @@
   --bg_color: #e3e7ff;
   --input-text: #091133;
   --input-bgc: transparent !important;
+  --important-todo: #0069ff;
 }
 
 * {
@@ -60,6 +63,10 @@
 
 html {
   overflow-y: scroll;
+
+  ul {
+    list-style: none;
+  }
 }
 
 body {

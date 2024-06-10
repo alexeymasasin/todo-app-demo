@@ -1,12 +1,12 @@
 .todo {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   padding: 10px 12px;
-  height: 40px;
+  min-height: 40px;
   margin: 0 0 15px 0;
-  font-size: 1.35rem;
+  font-size: 1.4rem;
   border-radius: 12px;
-  border: 2px solid var(--text_color);
+  border: 3px solid var(--text_color);
   color: var(--text_color);
   background-color: rgba(253, 255, 254, 0.06);
   transition: 0.3s;
@@ -16,23 +16,38 @@
   opacity: 0.5;
 }
 
-.todo_text {
-  width: 100%;
+.todo_left {
   text-align: left;
   display: flex;
   align-items: center;
+
+}
+
+.todo_text {
+  width: 440px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  word-break: break-all
+}
+
+.todo_right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 5px;
 }
 
 .todo_icon {
   font-size: 1.8rem;
-  margin-right: 10px;
+  height: 40px;
   color: var(--text_color);
   transition: all 0.3s;
   cursor: pointer;
+  margin-right: 10px;
 }
 
 .todo_done_icon {
-  margin-left: 4px;
 }
 
 .todo_delete_icon,
@@ -43,14 +58,28 @@
   transition: all 0.3s;
 }
 
+.important_todo {
+  border: 3px solid var(--important-todo);
+  color: var(--important-todo);
+}
+
+.important_todo .todo_delete_icon,
+.important_todo .todo_done_icon {
+  color: var(--important-todo);
+}
+
 .important {
-  color: #f6b40c;
+  color: var(--important-todo);
 }
 
 @media (max-width: 650px) {
   .todo {
     width: 77%;
     margin: 0 auto 15px;
+  }
+
+  .todo_text {
+    overflow-wrap: break-word;
   }
 }
 
