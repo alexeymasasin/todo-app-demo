@@ -5,7 +5,7 @@ import useDocumentTitle from '../../hooks/useDocumentTitle';
 import styles from './FAQ.module.css';
 
 function FAQ() {
-  useDocumentTitle('FAQ');
+  useDocumentTitle('FAQ_PAGE');
 
   const { t } = useTranslation();
 

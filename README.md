@@ -2,7 +2,7 @@
 
 <p>
 Welcome to my TodoApp App – a simple todo-list web application developed & designed by me to help you stay organized and manage your
-day-to-day tasks by keeping your tasks right in the browser tab
+day-to-day tasks by keeping them right in the browser tab
 </p>
 
 ## Current Release

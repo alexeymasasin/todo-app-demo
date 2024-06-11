@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { AnimatePresence, motion } from 'framer-motion';
-import styles from './Todo.module.css';
+import styles from './TodoApp.module.css';
 import TodoForm from './Todos/TodoForm';
 import TodoList from './Todos/TodoList';
 import TodosActions from './Todos/TodosActions';
 import useDocumentTitle from '../../hooks/useDocumentTitle';
 
 function TodoApp() {
-  useDocumentTitle('Home');
+  useDocumentTitle('HOME_PAGE');
 
   const [todos, setTodos] = useState(
     () => JSON.parse(localStorage.getItem('todos')) || []);

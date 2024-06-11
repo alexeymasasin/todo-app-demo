@@ -7,7 +7,7 @@ import styles from './Settings.module.css';
 import i18n from './../../i18n';
 
 function Settings() {
-  useDocumentTitle('Settings');
+  useDocumentTitle('SETTINGS_PAGE');
 
   const { t } = useTranslation();
   const [language, setLanguage] = useLocalStorage('language', 'ru');

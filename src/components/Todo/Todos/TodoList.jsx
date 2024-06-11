@@ -40,7 +40,7 @@ function TodoList({
                      animate={{ opacity: 1 }}
                      exit={{
                        opacity: 0, transition: { delay: 0 },
-                     }}>{t('TodoApp list is empty')}</motion.h3>}
+                     }}>{t('TODOLIST_IS_EMPTY')}</motion.h3>}
       </AnimatePresence>
       <Reorder.Group axis="y" values={todos} onReorder={setTodos}
                      key="reorder_when_down">

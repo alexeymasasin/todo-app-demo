@@ -3,7 +3,7 @@
   "CHANGE_LANGUAGE": "Change language to Russian",
   "TURN_DARK": "Turn on dark theme",
   "TURN_LIGHT": "Turn on light theme",
-  "Todo list is empty": "Todo list is empty",
+  "TODOLIST_IS_EMPTY": "Todo list is empty",
   "Enter new todo...": "Enter new todo...",
   "Done": "Done",
   "HIDE_TODOS": "Hide todos",
@@ -28,5 +28,9 @@
   "CLEAR_COMPLETED": "Clear completed todos",
   "RESET_TODOS": "Reset todos",
   "CAN_SAVE?": "Can i save my tasks?",
-  "SAVING": "Yes, all your tasks are being automatically saved in your browser local storage, so you can feel free leaving or refreshing it. In future releases, I'll also add .JSON \"import-export\" functionality to keep your todos safe"
+  "SAVING": "Yes, all your tasks are being automatically saved in your browser local storage, so you can feel free leaving or refreshing it. In future releases, I'll also add .JSON \"import-export\" functionality to keep your todos safe",
+  "HOME_PAGE": "Home",
+  "SETTINGS_PAGE": "Settings",
+  "FAQ_PAGE": "FAQ",
+  "NOT_FOUND": "Not Found"
 }

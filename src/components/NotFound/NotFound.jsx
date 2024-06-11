@@ -4,7 +4,7 @@ import styles from './NotFound.module.css';
 import useDocumentTitle from '../../hooks/useDocumentTitle';
 
 function NotFound() {
-  useDocumentTitle('Not Found');
+  useDocumentTitle('NOT_FOUND');
 
   return (
     <motion.div className={styles.not_found} initial={{ opacity: 0 }}

@@ -1,9 +1,11 @@
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const useDocumentTitle = (pageTitle) => {
+  const { t } = useTranslation();
   return (
     useEffect(() => {
-      document.title = 'TodoApp App · ' + pageTitle;
+      document.title = 'Todo App · ' + t(pageTitle);
     })
   );
 };
