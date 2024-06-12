@@ -1,5 +1,3 @@
-import styles from './Navbar.module.css';
-import Button from './../UI/Button';
 import {
   RiGithubFill,
   RiGitRepositoryLine,
@@ -8,16 +6,20 @@ import {
   RiStickyNoteLine,
 } from 'react-icons/ri';
 import { NavLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import styles from './Navbar.module.css';
+import Button from './../UI/Button';
 
-function Navbar(props) {
+function Navbar() {
+  const { t } = useTranslation();
 
   return (
-    <div className={styles.sidebar}>
+    <div className={styles.navbar}>
       <NavLink to="/" end
                className={({ isActive }) => isActive
                  ? ` ${styles.active}`
                  : ''}>
-        <Button title="TodoApp"><RiStickyNoteLine
+        <Button title={t('HOME_PAGE')}><RiStickyNoteLine
           className={styles.sidebar_icon}/></Button>
       </NavLink>
 
@@ -25,7 +27,7 @@ function Navbar(props) {
                className={({ isActive }) => isActive
                  ? ` ${styles.active}`
                  : ''}>
-        <Button title="Settings"><RiSettings2Line
+        <Button title={t('SETTINGS_PAGE')}><RiSettings2Line
           className={styles.sidebar_icon}/></Button>
       </NavLink>
 
@@ -33,19 +35,19 @@ function Navbar(props) {
                className={({ isActive }) => isActive
                  ? ` ${styles.active}`
                  : ''}>
-        <Button title="FAQ"><RiQuestionLine
+        <Button title={t('FAQ_PAGE')}><RiQuestionLine
           className={styles.sidebar_icon}/></Button>
       </NavLink>
 
       <a href="https://github.com/alexeymasasin/todo-app-demo" target="_blank"
          rel="noopener noreferrer">
-        <Button title="GitHub Repository"><RiGitRepositoryLine
+        <Button title={t('GITHUB_REPO')}><RiGitRepositoryLine
           className={styles.sidebar_icon}/></Button>
       </a>
 
       <a href="https://github.com/alexeymasasin/" target="_blank"
          rel="noopener noreferrer">
-        <Button title="My GitHub Page"><RiGithubFill
+        <Button title={t('GITHUB_PAGE')}><RiGithubFill
           className={styles.sidebar_icon}/></Button>
       </a>
     </div>

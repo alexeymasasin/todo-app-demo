@@ -31,5 +31,7 @@
   "HOME_PAGE": "Главная",
   "SETTINGS_PAGE": "Настройки",
   "FAQ_PAGE": "FAQ",
-  "NOT_FOUND": "Страница не найдена"
+  "NOT_FOUND": "Страница не найдена",
+  "GITHUB_REPO": "GitHub-репозиторий",
+  "GITHUB_PAGE": "Моя страница на GitHub"
 }

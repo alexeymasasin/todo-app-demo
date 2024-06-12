@@ -32,5 +32,7 @@
   "HOME_PAGE": "Home",
   "SETTINGS_PAGE": "Settings",
   "FAQ_PAGE": "FAQ",
-  "NOT_FOUND": "Not Found"
+  "NOT_FOUND": "Not Found",
+  "GITHUB_REPO": "GitHub Repository",
+  "GITHUB_PAGE": "My GitHub Page"
 }
