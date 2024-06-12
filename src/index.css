@@ -9,6 +9,8 @@
   --input-bgc: #FDFFFE;
   --input-text: #091133;
   --important-todo: #f6b40c;
+  --done-icon: #1aff00;
+  --delete-icon: #f62f0c;
 }
 
 [data-theme="dark"] {
@@ -18,6 +20,9 @@
   --input-bgc: #FDFFFE;
   --input-text: #091133;
   --important-todo: #f6b40c;
+  --text_tertiary: #1875ff;
+  --done-icon: #1aff00;
+  --delete-icon: #f62f0c;
 }
 
 [data-theme="light"] {
@@ -27,6 +32,9 @@
   --input-text: #091133;
   --input-bgc: transparent !important;
   --important-todo: #0069ff;
+  --text_tertiary: #1875ff;
+  --done-icon: #1aff00;
+  --delete-icon: #f62f0c;
 }
 
 * {
@@ -56,6 +64,7 @@
 
 html {
   overflow-y: scroll;
+  scroll-behavior: smooth;
 
   ul {
     list-style: none;
