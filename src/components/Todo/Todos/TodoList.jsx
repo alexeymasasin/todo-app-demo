@@ -41,7 +41,7 @@ function TodoList({
                        opacity: 0, transition: { delay: 0 },
                      }}>{t('TODOLIST_IS_EMPTY')}</motion.h3>}
       </AnimatePresence>
-      <motion.div>
+      <motion.div layout>
         <AnimatePresence>
           <Reorder.Group axis="y" values={todos}
                          onReorder={setTodos}
@@ -71,8 +71,9 @@ function TodoList({
                     scale: 1.015,
                     transition: { duration: 0.2 }, // on-hover transition
                   }}
-                  
-                  exit={{ height: 0 }}
+                  transition={{
+                    duration: 0.2, // on-hover-exit transition
+                  }}
                 >
                   <Todo importantTodo={importantTodo}
                         deleteTodo={deleteTodo}
@@ -84,17 +85,16 @@ function TodoList({
           </Reorder.Group>
           <AnimatePresence key="completed_todos">
             {!!completedTodosCount &&
-              <motion.div layout="position"
-                          className={styles.completed_todos_text}
-                          key="completed_todos_count"
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          exit={{
-                            opacity: 0,
-                          }}>
+              <motion.h3 key="completed_todos_count"
+                         initial={{ opacity: 0 }}
+                         animate={{ opacity: 1 }}
+                         transition={{ delay: 0.2 }}
+                         exit={{
+                           opacity: 0,
+                         }}>
                 {t(
                   'YOU_COMPLETED')} {completedTodosCount} {todosDeclinationHandler()}
-              </motion.div>
+              </motion.h3>
             }
           </AnimatePresence>
         </AnimatePresence>
