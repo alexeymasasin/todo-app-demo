@@ -34,5 +34,11 @@
   "FAQ_PAGE": "FAQ",
   "NOT_FOUND": "Not Found",
   "GITHUB_REPO": "GitHub Repository",
-  "GITHUB_PAGE": "My GitHub Page"
+  "GITHUB_PAGE": "My GitHub Page",
+  "RESET_ALL?": "Are you sure that you want to delete all of your todos?",
+  "TODOS_DELETED": "Your todos have been successfully deleted",
+  "YES": "Yes",
+  "NO": "No",
+  "DONE!": "Done!",
+  "OK": "OK"
 }

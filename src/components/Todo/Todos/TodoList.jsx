@@ -13,7 +13,6 @@ function TodoList({
   setTodos,
   toggleTodo,
 }) {
-
   const todosDeclinationHandler = () => {
     if (completedTodosCount % 10 === 1 && completedTodosCount % 100 !== 11) {
       return t('TASKS_ONE');
@@ -26,7 +25,6 @@ function TodoList({
   };
 
   const { t } = useTranslation();
-
   const constraintsRef = useRef(null);
 
   return (
@@ -45,7 +43,7 @@ function TodoList({
       </AnimatePresence>
       <motion.div layout>
         <AnimatePresence>
-          <Reorder.Group values={todos}
+          <Reorder.Group axis="y" values={todos}
                          onReorder={setTodos}
                          initial={{ opacity: 0 }}
                          animate={{ opacity: 1 }}
@@ -56,24 +54,29 @@ function TodoList({
                          key="reorder_group">
             <AnimatePresence key="todos_map_anim">
               {hidden ? null : todos.map((todo) => (
-                <Reorder.Item value={todo} key={todo.id}
-                              dragConstraints={constraintsRef}
-                              dragTransition={{
-                                bounceStiffness: 300,
-                                bounceDamping: 50,
-                              }}
-                              whileTap={{ cursor: 'grabbing' }}
-                              whileDrag={{ cursor: 'grabbing' }}
-                              whileHover={{
-                                cursor: '-webkit-grab',
-                                scale: 1.015,
-                                transition: { duration: 0.2 }, // on-hover transition
-                              }}
-                              transition={{
-                                duration: 0.2, // on-hover-exit transition
-                              }}
+                <Reorder.Item
+                  style={{ position: 'relative' }}
+                  value={todo} key={todo.id}
+                  dragConstraints={constraintsRef}
+                  dragTransition={{
+                    bounceStiffness: 300,
+                    bounceDamping: 50,
+                  }}
+                  whileTap={{ cursor: 'grabbing' }}
+                  whileDrag={{
+                    cursor: 'grabbing',
+                  }}
+                  whileHover={{
+                    cursor: '-webkit-grab',
+                    scale: 1.015,
+                    transition: { duration: 0.2 }, // on-hover transition
+                  }}
+                  transition={{
+                    duration: 0.2, // on-hover-exit transition
+                  }}
                 >
-                  <Todo importantTodo={importantTodo} deleteTodo={deleteTodo}
+                  <Todo importantTodo={importantTodo}
+                        deleteTodo={deleteTodo}
                         todo={todo} key={todo.id}
                         toggleTodo={toggleTodo}/>
                 </Reorder.Item>

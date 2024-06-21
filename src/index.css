@@ -5,6 +5,7 @@
   --text_secondary: #0069ff;
   --text_tertiary: #1875ff;
   --bg_color: #091133;
+  --todo_bg: #091133;
   --white: #FDFFFE;
   --input-bgc: #FDFFFE;
   --input-text: #091133;
@@ -17,6 +18,7 @@
   --text_color: #FDFFFE;
   --text_secondary: #0069ff;
   --bg_color: #091133;
+  --todo_bg: #121c41;
   --input-bgc: #FDFFFE;
   --input-text: #091133;
   --important-todo: #f6b40c;
@@ -29,11 +31,12 @@
   --text_color: #091133;
   --text_secondary: #0069ff;
   --bg_color: #e3e7ff;
+  --todo_bg: #e3e7ff;
   --input-text: #091133;
   --input-bgc: transparent !important;
   --important-todo: #0069ff;
   --text_tertiary: #1875ff;
-  --done-icon: #1aff00;
+  --done-icon: #22b214;
   --delete-icon: #f62f0c;
 }
 
