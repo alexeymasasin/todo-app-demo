@@ -6,6 +6,8 @@ import TodoForm from './Todos/TodoForm';
 import TodoList from './Todos/TodoList';
 import TodosActions from './Todos/TodosActions';
 import useDocumentTitle from '../../hooks/useDocumentTitle';
+import { useTranslation } from 'react-i18next';
+import Swal from 'sweetalert2';
 
 function TodoApp() {
   useDocumentTitle('HOME_PAGE');
@@ -22,6 +24,8 @@ function TodoApp() {
   useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos));
   }, [todos]);
+
+  const { t } = useTranslation();
 
   const addTodoHandler = (text) => {
     const newTodo = {
@@ -51,10 +55,34 @@ function TodoApp() {
     ));
   };
 
+  // const resetTodosHandler = () => {
+  //   if (window.confirm(t('RESET_ALL?'))) {
+  //     setTodos([]);
+  //   }
+  // };
+
   const resetTodosHandler = () => {
-    if (window.confirm('Are you sure you want to delete all of your todos?')) {
-      setTodos([]);
-    }
+    Swal.fire({
+      title: t('RESET_ALL?'),
+      showCancelButton: true,
+      confirmButtonText: t('YES'),
+      confirmButtonColor: 'var(--text_secondary)',
+      cancelButtonText: t('NO'),
+      icon: 'warning',
+      iconColor: 'var(--text_secondary)',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        setTodos([]);
+        Swal.fire({
+          title: t('DONE!'),
+          text: t('TODOS_DELETED'),
+          icon: 'success',
+          iconColor: 'var(--text_secondary)',
+          confirmButtonText: t('OK'),
+          confirmButtonColor: 'var(--text_secondary)',
+        });
+      }
+    });
   };
 
   const deleteCompletedTodosHandler = () => {

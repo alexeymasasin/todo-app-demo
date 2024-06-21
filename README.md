@@ -31,6 +31,7 @@ The app will now be running at [http://localhost:3000/](http://localhost:3000/).
 - Framer Motion
 - I18Next
 - UUID
+- SweetAlert2
 
 ## Functionality
 
