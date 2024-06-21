@@ -5,3 +5,11 @@
   right: 0;
   width: fit-content;
 }
+
+.completed_todos_text {
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: var(--text_color);
+  position: relative;
+  display: block;
+}
