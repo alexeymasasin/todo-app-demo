@@ -62,13 +62,20 @@ function TodoList({
                                 bounceStiffness: 300,
                                 bounceDamping: 50,
                               }}
+                              whileTap={{ cursor: 'grabbing' }}
+                              whileDrag={{ cursor: 'grabbing' }}
                               whileHover={{
-                                scale: 1.025,
-                              }}>
+                                cursor: '-webkit-grab',
+                                scale: 1.015,
+                                transition: { duration: 0.2 }, // on-hover transition
+                              }}
+                              transition={{
+                                duration: 0.2, // on-hover-exit transition
+                              }}
+                >
                   <Todo importantTodo={importantTodo} deleteTodo={deleteTodo}
                         todo={todo} key={todo.id}
                         toggleTodo={toggleTodo}/>
-
                 </Reorder.Item>
               ))}
             </AnimatePresence>
