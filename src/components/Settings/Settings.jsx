@@ -5,6 +5,7 @@ import useLocalStorage from './../../hooks/useLocalStorate';
 import useDocumentTitle from '../../hooks/useDocumentTitle';
 import styles from './Settings.module.css';
 import i18n from './../../i18n';
+import { useState } from 'react';
 
 function Settings() {
   useDocumentTitle('SETTINGS_PAGE');
@@ -48,9 +49,20 @@ function Settings() {
     if (themeDataHandler() === 'dark') {
       setLightTheme();
       localStorage.setItem('selectedTheme', 'light');
+      setThemeData(themeDataHandler());
     } else {
       setDarkTheme();
       localStorage.setItem('selectedTheme', 'dark');
+      setThemeData(themeDataHandler());
+    }
+  };
+
+  const [themeData, setThemeData] = useState(themeDataHandler());
+  const themeTitleHandler = () => {
+    if (themeData === 'light') {
+      return t('TURN_DARK');
+    } else {
+      return t('TURN_LIGHT');
     }
   };
 
@@ -73,8 +85,7 @@ function Settings() {
 
         <div>
           <button className={styles.setting}
-                  title={themeDataHandler() === 'light' ? t('TURN_DARK') : t(
-                    'TURN_LIGHT')} onClick={themeChangeHandler}>
+                  title={themeTitleHandler()} onClick={themeChangeHandler}>
             <IoInvertModeOutline/>
           </button>
         </div>
