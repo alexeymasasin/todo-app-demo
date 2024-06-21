@@ -1,18 +1,23 @@
+.container {
+  margin: 0 auto;
+}
+
 .container form {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex: 1
+
 }
 
 .container input {
+  box-sizing: border-box;
+  height: 60px;
   width: 45%;
-  height: 40px;
   font-size: 1.3rem;
   color: var(--input-text);
   background-color: var(--input-bgc);
   border: 3px var(--text_color) solid;
-  padding: 7px 14px;
+  padding: 7px 10px;
   transition: 0.3s;
 }
 
@@ -81,8 +86,12 @@
 }
 
 @media (max-width: 650px) {
+  .container {
+    width: 80%
+  }
+
   .container input {
-    width: 55%;
+    width: 100%;
   }
 
   .arrow_icon {

@@ -128,3 +128,10 @@
     transform: scale(1.15);
   }
 }
+
+@media (max-width: 650px) {
+  .todo {
+    width: 80%;
+    box-sizing: border-box;
+  }
+}
