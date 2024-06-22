@@ -3,6 +3,7 @@ import styles from './TodoList.module.css';
 import { AnimatePresence, motion, Reorder } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useRef } from 'react';
+import CompletedTodos from './CompletedTodos';
 
 function TodoList({
   importantTodo,
@@ -13,23 +14,12 @@ function TodoList({
   setTodos,
   toggleTodo,
 }) {
-  const todosDeclinationHandler = () => {
-    if (completedTodosCount % 10 === 1 && completedTodosCount % 100 !== 11) {
-      return t('TASKS_ONE');
-    } else if (completedTodosCount % 10 >= 2 && completedTodosCount % 10 <= 4 &&
-      (completedTodosCount % 100 < 10 || completedTodosCount % 100 >= 20)) {
-      return t('TASKS_FEW');
-    } else {
-      return t('TASKS_MANY');
-    }
-  };
 
   const { t } = useTranslation();
   const constraintsRef = useRef(null);
 
   return (
-    <motion.div ref={constraintsRef}
-                className={styles.todo_list_container}>
+    <motion.div ref={constraintsRef}>
       <AnimatePresence mode="wait">
         {todos.length === 0 &&
           <motion.h3 className={styles.is_todolist_empty}
@@ -43,15 +33,17 @@ function TodoList({
       </AnimatePresence>
       <motion.div layout>
         <AnimatePresence>
-          <Reorder.Group axis="y" values={todos}
+          <Reorder.Group layout axis="y" values={todos}
                          onReorder={setTodos}
-                         initial={{ opacity: 0 }}
+                         initial={{
+                           opacity: 0,
+                         }}
                          animate={{ opacity: 1 }}
                          exit={{
                            opacity: 0,
                            transition: { delay: 0.2 },
                          }}
-                         key="reorder_group">
+                         key="reorder_group" class={styles.reorder_group}>
             <AnimatePresence key="todos_map_anim">
               {hidden ? null : todos.map((todo) => (
                 <Reorder.Item
@@ -82,21 +74,9 @@ function TodoList({
                 </Reorder.Item>
               ))}
             </AnimatePresence>
+            <CompletedTodos key="completed_todos"
+                            completedTodosCount={completedTodosCount}/>
           </Reorder.Group>
-          <AnimatePresence key="completed_todos">
-            {!!completedTodosCount &&
-              <motion.h3 key="completed_todos_count"
-                         initial={{ opacity: 0 }}
-                         animate={{ opacity: 1 }}
-                         transition={{ delay: 0.2 }}
-                         exit={{
-                           opacity: 0,
-                         }}>
-                {t(
-                  'YOU_COMPLETED')} {completedTodosCount} {todosDeclinationHandler()}
-              </motion.h3>
-            }
-          </AnimatePresence>
         </AnimatePresence>
       </motion.div>
     </motion.div>

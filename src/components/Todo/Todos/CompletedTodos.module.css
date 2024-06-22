@@ -1,0 +1,7 @@
+.completed_todos {
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: var(--text_color);
+  position: relative;
+  display: block;
+}
