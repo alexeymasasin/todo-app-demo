@@ -68,10 +68,12 @@ function TodoApp() {
       confirmButtonText: t('YES'),
       confirmButtonColor: 'var(--text_secondary)',
       cancelButtonText: t('NO'),
+      cancelButtonColor: '#575c65',
       icon: 'warning',
       iconColor: 'var(--text_secondary)',
       width: '20em',
-      background: 'var(--white)',
+      color: 'var(--text_color)',
+      background: 'var(--bg_color)',
     }).then((result) => {
       if (result.isConfirmed) {
         setTodos([]);
@@ -83,6 +85,8 @@ function TodoApp() {
           confirmButtonText: t('OK'),
           confirmButtonColor: 'var(--text_secondary)',
           width: '20em',
+          color: 'var(--text_color)',
+          background: 'var(--bg_color)',
         });
       }
     });

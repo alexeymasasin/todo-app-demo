@@ -1,7 +1,7 @@
 .todo {
   display: flex;
   justify-content: space-between;
-  padding: 10px 12px;
+  padding: 10px;
   min-height: 40px;
   margin: 0 0 15px 0;
   font-size: 1.4rem;
@@ -24,7 +24,7 @@
 }
 
 .todo_text {
-  width: 440px;
+  width: 100%;
   text-align: left;
   display: flex;
   align-items: center;
