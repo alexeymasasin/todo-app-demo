@@ -11,7 +11,7 @@ function NotFound() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}>
-      <h1 className={styles.not_found_title}>Page Not Found</h1>
+      <h1 className={styles.title}>Page Not Found</h1>
       <NavLink to="/" className={styles.go_home}>
         Go to Home
       </NavLink>

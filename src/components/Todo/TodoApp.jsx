@@ -83,6 +83,7 @@ function TodoApp() {
     }).then((result) => {
       if (result.isConfirmed) {
         setTodos([]);
+        localStorage.clear();
         Swal.fire({
           title: t('DONE!'),
           text: t('TODOS_DELETED'),

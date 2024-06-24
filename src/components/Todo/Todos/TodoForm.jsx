@@ -7,9 +7,6 @@ function TodoForm({ addTodo, hideTodos, hidden }) {
   const [text, setText] = useState('');
   const [arrowUp, setArrowUp] = useState(false);
 
-  const rotate180Deg = { transform: 'rotate(180deg)' };
-  const rotate0Deg = { transform: 'rotate(0deg)' };
-
   const { t } = useTranslation();
 
   const onSubmitHandler = (e) => {
@@ -32,8 +29,10 @@ function TodoForm({ addTodo, hideTodos, hidden }) {
         hideTodos();
         setArrowUp(!arrowUp);
       }}
-                      className={`${styles.arrow_icon} `}
-                      style={arrowUp ? rotate180Deg : rotate0Deg}
+                      className={`${styles.arrow_icon} ${
+                        localStorage.getItem('todolist_hidden') === 'true'
+                          ? styles.up
+                          : styles.down}`}
                       title={hidden ? t('SHOW_TODOS') : t('HIDE_TODOS')}
       />
     </div>
