@@ -43,7 +43,7 @@ node_modules/
 jspm_packages/
 
 # Deploy-ready directories
-build
+/build
 
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/

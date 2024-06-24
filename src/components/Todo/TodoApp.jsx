@@ -17,12 +17,24 @@ function TodoApp() {
   const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
-    const storedTodos = JSON.parse(localStorage.getItem('todos')) || [];
-    setTodos(storedTodos);
+    let actual = true;
+    if (actual) {
+      const storedTodos = JSON.parse(localStorage.getItem('todos')) || [];
+      setTodos(storedTodos);
+    }
+    return () => {
+      actual = false;
+    };
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('todos', JSON.stringify(todos));
+    let actual = true;
+    if (actual) {
+      localStorage.setItem('todos', JSON.stringify(todos));
+    }
+    return () => {
+      actual = false;
+    };
   }, [todos]);
 
   const { t } = useTranslation();
@@ -54,12 +66,6 @@ function TodoApp() {
       : { ...todo },
     ));
   };
-
-  // const resetTodosHandler = () => {
-  //   if (window.confirm(t('RESET_ALL?'))) {
-  //     setTodos([]);
-  //   }
-  // };
 
   const resetTodosHandler = () => {
     Swal.fire({
@@ -119,21 +125,14 @@ function TodoApp() {
       <TodoForm addTodo={addTodoHandler} hideTodos={hideTodosHandler}
                 hidden={hidden}
                 key="todo_form"/>
-      <TodoList completedTodosCount={completedTodosCount}
-                deleteTodo={deleteTodoHandler} todos={todos}
-                hidden={hidden}
-                setTodos={setTodos}
-                toggleTodo={toggleTodoHandler}
-                importantTodo={importantTodoHandler} key="todo_list"/>
-      <motion.div key="todo_list_container"
-                  transition={{ duration: 0.2, delay: 0.2 }}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{
-                    opacity: 0,
-                    transition: { delay: 0.2 },
-                  }}>
-      </motion.div>
+      <AnimatePresence>
+        <TodoList completedTodosCount={completedTodosCount}
+                  deleteTodo={deleteTodoHandler} todos={todos}
+                  hidden={hidden}
+                  setTodos={setTodos}
+                  toggleTodo={toggleTodoHandler}
+                  importantTodo={importantTodoHandler} key="todo_list"/>
+      </AnimatePresence>
     </motion.div>
   );
 }

@@ -66,12 +66,9 @@
 }
 
 html {
+  list-style-type: none;
   overflow-y: scroll;
   scroll-behavior: smooth;
-
-  ul {
-    list-style: none;
-  }
 }
 
 body {
