@@ -19,7 +19,7 @@ function TodoList({
   const constraintsRef = useRef(null);
 
   return (
-    <motion.div ref={constraintsRef} key="todo_list">
+    <motion.div ref={constraintsRef} key="todo_list" className={styles.list}>
       <AnimatePresence mode="wait">
         {todos.length === 0 &&
           <motion.h3 className={styles.is_todolist_empty}

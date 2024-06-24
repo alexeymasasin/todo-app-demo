@@ -1,6 +1,6 @@
 .is_todolist_empty {
   position: absolute;
-  margin: -10px auto 0;
+  margin: -5px auto 0;
   left: 0;
   right: 0;
   width: fit-content;
@@ -9,4 +9,8 @@
 .reorder_group {
   display: flex;
   flex-direction: column;
+}
+
+.list {
+  margin-top: 5px;
 }
