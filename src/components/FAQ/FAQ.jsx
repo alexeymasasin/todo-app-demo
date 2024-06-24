@@ -14,7 +14,7 @@ function FAQ() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}>
-      <h1 className={styles.title}>FAQ</h1>
+      <h1 className={styles.faq_title}>FAQ</h1>
       <div className={styles.faq_section}>
         <div className={styles.faq_item}>
           <h2><TbMessageCircleQuestion/> {t(`What's this Todo App?`)}</h2>
