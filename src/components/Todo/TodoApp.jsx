@@ -99,7 +99,34 @@ function TodoApp() {
   };
 
   const deleteCompletedTodosHandler = () => {
-    setTodos(todos.filter((todo) => !todo.isCompleted));
+    Swal.fire({
+      title: t('RESET_COMPLETED?'),
+      showCancelButton: true,
+      confirmButtonText: t('YES'),
+      confirmButtonColor: 'var(--text_secondary)',
+      cancelButtonText: t('NO'),
+      cancelButtonColor: '#575c65',
+      icon: 'question',
+      iconColor: 'var(--text_secondary)',
+      width: '20em',
+      color: 'var(--text_color)',
+      background: 'var(--bg_color)',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        setTodos(todos.filter((todo) => !todo.isCompleted));
+        Swal.fire({
+          title: t('DONE!'),
+          text: t('TODOS_DELETED'),
+          icon: 'success',
+          iconColor: 'var(--text_secondary)',
+          confirmButtonText: t('OK'),
+          confirmButtonColor: 'var(--text_secondary)',
+          width: '20em',
+          color: 'var(--text_color)',
+          background: 'var(--bg_color)',
+        });
+      }
+    });
   };
 
   const hideTodosHandler = () => {

@@ -36,6 +36,7 @@
   "GITHUB_REPO": "GitHub Repository",
   "GITHUB_PAGE": "My GitHub Page",
   "RESET_ALL?": "Are you sure that you want to delete all of your todos?",
+  "RESET_COMPLETED?": "Are you sure that you want to delete all of your completed todos?",
   "TODOS_DELETED": "Your todos have been successfully deleted",
   "YES": "Yes",
   "NO": "No",

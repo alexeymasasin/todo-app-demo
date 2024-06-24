@@ -18,16 +18,17 @@ const CompletedTodos = ({ completedTodosCount }) => {
   return (
     <AnimatePresence key="completed_todos">
       {!!completedTodosCount &&
-        <motion.div layout="position"
-                    className={styles.completed_todos}
-                    key="completed_todos_count"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{
-                      opacity: 0,
-                    }}>
-          {t(
-            'YOU_COMPLETED')} {completedTodosCount} {todosDeclinationHandler()}
+        <motion.div layout="position">
+          <motion.div className={styles.completed_todos}
+                      key="completed_todos_count"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{
+                        opacity: 0,
+                      }}>
+            {t(
+              'YOU_COMPLETED')} {completedTodosCount} {todosDeclinationHandler()}
+          </motion.div>
         </motion.div>
       }
     </AnimatePresence>
