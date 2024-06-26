@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import useDocumentTitle from '../../hooks/useDocumentTitle';
 import styles from './FAQ.module.css';
+import Title from '../UI/Title';
 
 function FAQ() {
   useDocumentTitle('FAQ_PAGE');
@@ -14,7 +15,7 @@ function FAQ() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}>
-      <h1 className={styles.faq_title}>FAQ</h1>
+      <Title title="FAQ"/>
       <div className={styles.faq_section}>
         <div className={styles.faq_item}>
           <h2><TbMessageCircleQuestion/> {t(`What's this Todo App?`)}</h2>

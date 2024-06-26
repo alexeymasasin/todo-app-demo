@@ -3,10 +3,6 @@
   overflow: hidden;
 }
 
-.faq_title {
-  font-weight: 500;
-}
-
 .faq_section {
   display: flex;
   padding: 0 10px;

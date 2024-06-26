@@ -8,6 +8,7 @@ import TodosActions from './Todos/TodosActions';
 import useDocumentTitle from '../../hooks/useDocumentTitle';
 import { useTranslation } from 'react-i18next';
 import Swal from 'sweetalert2';
+import Title from '../UI/Title';
 
 function TodoApp() {
   useDocumentTitle('HOME_PAGE');
@@ -148,7 +149,7 @@ function TodoApp() {
                         key="todos_actions"/>
         }
       </AnimatePresence>
-      <h1 style={{ userSelect: 'none' }} key="title">Todo App</h1>
+      <Title title="Todo App"/>
       <TodoForm addTodo={addTodoHandler} hideTodos={hideTodosHandler}
                 hidden={hidden}
                 key="todo_form"/>

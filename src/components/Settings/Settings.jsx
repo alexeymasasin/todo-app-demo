@@ -6,6 +6,7 @@ import useDocumentTitle from '../../hooks/useDocumentTitle';
 import styles from './Settings.module.css';
 import i18n from './../../i18n';
 import { useState } from 'react';
+import Title from '../UI/Title';
 
 function Settings() {
   useDocumentTitle('SETTINGS_PAGE');
@@ -71,7 +72,7 @@ function Settings() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}>
-      <h1 className={styles.title}>{t('Settings')}</h1>
+      <Title title={t('Settings')}/>
       <div className={styles.settings_items}>
         <div>
           <button className={styles.setting}
