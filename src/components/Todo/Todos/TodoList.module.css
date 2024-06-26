@@ -8,9 +8,25 @@
 
 .reorder_group {
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
+  gap: 12px;
+}
+
+.reorder_item {
+  display: inline-block;
+}
+
+.move_todo {
+  display: inline-block;
 }
 
 .list {
-  margin-top: 5px;
+  margin-top: 10px;
+}
+
+@media (max-width: 650px) {
+  .list {
+    margin-top: 5px;
+  }
 }

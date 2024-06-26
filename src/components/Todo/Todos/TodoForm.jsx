@@ -1,14 +1,11 @@
 import { useState } from 'react';
-import styles from './TodoFrom.module.css';
+import styles from './TodoForm.module.css';
 import { IoIosAdd, IoIosArrowDown } from 'react-icons/io';
 import { useTranslation } from 'react-i18next';
 
 function TodoForm({ addTodo, hideTodos, hidden }) {
   const [text, setText] = useState('');
   const [arrowUp, setArrowUp] = useState(false);
-
-  const rotate180Deg = { transform: 'rotate(180deg)' };
-  const rotate0Deg = { transform: 'rotate(0deg)' };
 
   const { t } = useTranslation();
 

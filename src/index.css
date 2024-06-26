@@ -66,14 +66,27 @@
 }
 
 html {
-  list-style-type: none;
   overflow-y: scroll;
   scroll-behavior: smooth;
+}
+
+ul {
+  position: relative;
+}
+
+li {
+  list-style: none;
+  width: 100%;
+  position: relative;
+  user-select: none;
 }
 
 body {
   background-color: var(--bg_color);
   transition: background-color 0.3s;
+  display: flex;
+  justify-content: center;
+  padding-right: 0 !important;
 }
 
 @media (max-width: 650px) {
@@ -81,11 +94,7 @@ body {
     color: var(--text_color);
     background-color: var(--bg_color);
     height: 80vh;
-    background-size: 100% 400%;
-    transition: all 0.3s;
-  }
-
-  body {
     background-size: 100% 1000%;
+    transition: all 0.3s;
   }
 }

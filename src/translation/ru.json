@@ -22,6 +22,7 @@
   "DELETE_TODO": "Удалить задачу",
   "COMPLETE_TODO": "Отметить завершённой",
   "IMPORTANT_TODO": "Отметить важной",
+  "MOVE_TODO": "Переместить задачу",
   "YOU_COMPLETED": "Вы выполнили",
   "TASKS_ONE": "задачу",
   "TASKS_FEW": "задачи",

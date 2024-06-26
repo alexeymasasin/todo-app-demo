@@ -40,35 +40,11 @@ function TodoList({
                          key="reorder_group">
             <AnimatePresence key="todos_map_anim">
               {hidden ? '' : todos.map((todo) => (
-                <Reorder.Item
-                  value={todo} key={todo.id}
-                  dragConstraints={constraintsRef}
-                  dragTransition={{
-                    bounceStiffness: 300,
-                    bounceDamping: 50,
-                  }}
-                  whileTap={{ cursor: 'grabbing' }}
-                  whileDrag={{
-                    cursor: 'grabbing',
-                  }}
-                  whileHover={{
-                    cursor: '-webkit-grab',
-                    scale: 1.015,
-                    transition: { duration: 0.2 }, // on-hover transition
-                  }}
-                  transition={{
-                    duration: 0.2, // on-hover-exit transition
-                  }}
-                  exit={{
-                    height: 0,
-                    transition: { delay: 0.3, duration: 0.3 },
-                  }}
-                >
-                  <Todo importantTodo={importantTodo}
-                        deleteTodo={deleteTodo}
-                        todo={todo} key={todo.id}
-                        toggleTodo={toggleTodo}/>
-                </Reorder.Item>
+                <Todo importantTodo={importantTodo}
+                      deleteTodo={deleteTodo}
+                      todo={todo} key={todo.id}
+                      toggleTodo={toggleTodo}
+                      constraintsRef={constraintsRef}/>
               ))}
             </AnimatePresence>
             <CompletedTodos key="completed_todos"

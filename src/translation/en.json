@@ -21,6 +21,7 @@
   "DELETE_TODO": "Delete todo",
   "COMPLETE_TODO": "Mark as completed",
   "IMPORTANT_TODO": "Mark as important",
+  "MOVE_TODO": "Move todo",
   "YOU_COMPLETED": "You have completed",
   "TASKS_ONE": "todo",
   "TASKS_FEW": "todos",
