@@ -32,8 +32,9 @@ function TodoForm({ addTodo, hideTodos, hidden }) {
         hideTodos();
         setArrowUp(!arrowUp);
       }}
-                      className={`${styles.arrow_icon} `}
-                      style={arrowUp ? rotate180Deg : rotate0Deg}
+                      className={`${styles.arrow_icon} ${arrowUp
+                        ? styles.down
+                        : styles.up}`}
                       title={hidden ? t('SHOW_TODOS') : t('HIDE_TODOS')}
       />
     </div>

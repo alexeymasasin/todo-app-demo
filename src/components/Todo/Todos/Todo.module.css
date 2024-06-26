@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  height: fit-content;
   margin-bottom: 14px;
   font-size: 1.4rem;
   border-radius: 12px;
@@ -29,7 +28,7 @@
   text-align: left;
   display: flex;
   align-items: center;
-  word-break: break-all
+  word-break: break-word;
 }
 
 .todo_right {
@@ -75,13 +74,10 @@
 
 @media (max-width: 650px) {
   .todo {
-    width: 77%;
+    width: 80%;
     margin: 0 auto 15px;
   }
 
-  .todo_text {
-    overflow-wrap: break-word;
-  }
 }
 
 @media (hover: hover) {
@@ -127,12 +123,5 @@
 
   .todo_icon:active {
     transform: scale(1.15);
-  }
-}
-
-@media (max-width: 650px) {
-  .todo {
-    width: 80%;
-    box-sizing: border-box;
   }
 }

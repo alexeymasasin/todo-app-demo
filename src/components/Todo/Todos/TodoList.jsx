@@ -41,7 +41,6 @@ function TodoList({
             <AnimatePresence key="todos_map_anim">
               {hidden ? '' : todos.map((todo) => (
                 <Reorder.Item
-                  style={{ position: 'relative' }}
                   value={todo} key={todo.id}
                   dragConstraints={constraintsRef}
                   dragTransition={{

@@ -73,6 +73,14 @@
   opacity: 1;
 }
 
+.up {
+  transform: rotate(180deg);
+}
+
+.down {
+  transform: rotate(0deg);
+}
+
 @media (hover: hover) {
   .arrow_icon:hover {
     opacity: 1;
