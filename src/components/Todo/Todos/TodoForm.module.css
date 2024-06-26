@@ -6,13 +6,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
+  margin: 0 auto;
 }
 
 .container input {
   box-sizing: border-box;
   height: 60px;
-  width: 45%;
+  width: 240px;
   font-size: 1.3rem;
   color: var(--input-text);
   background-color: var(--input-bgc);
@@ -95,7 +95,7 @@
 
 @media (max-width: 650px) {
   .container {
-    width: 80%
+    width: 90%
   }
 
   .container input {
