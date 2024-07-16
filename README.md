@@ -1,4 +1,4 @@
-<h1> TodoApp App (React.js) </h1>
+<h1> Todo App (React.js) </h1>
 
 <p>
 Welcome to my TodoApp App – a simple todo-list web application developed & designed by me to help you stay organized and manage your
