@@ -1,8 +1,9 @@
-<h1> Todo App (React.js) </h1>
+<p align="center">
+<img src="https://github.com/alexeymasasin/todo-app-demo/blob/main/public/hero.png" width="50%" />
+</p>
 
-<p>
-Welcome to my Todo App – a simple todo-list web application developed & designed by me to help you stay organized and manage your
-day-to-day tasks by keeping them right in the browser tab
+<p align="center">
+Welcome to my Todo App! – a simple open-source todo-list web application developed & designed by me to help you stay organized and manage your day-to-day tasks by keeping them right in the browser tab
 </p>
 
 ## Current Release
