@@ -36,10 +36,11 @@ The app will now be running at [http://localhost:3000/](http://localhost:3000/).
 
 ## Functionality
 
-- Saving all tasks and their state in local storage
 - Add & remove task
 - Drag & drop tasks to reorder
 - Mark a task as completed & important
+- Saving all tasks and their state in local storage
+- Export / import tasks
 - Switch todos visibility
 - Switch between dark & light UI
 - Switch between languages (RU & EN)
