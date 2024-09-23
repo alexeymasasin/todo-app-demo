@@ -8,7 +8,7 @@ Welcome to my Todo App! – a simple open-source todo-list web application devel
 
 ## Current Release
 
-App is available on this [GitHub Pages Link](https://alexeymasasin.github.io/todo-app-demo/)
+App is available online on this [GitHub Pages Link](https://alexeymasasin.github.io/todo-app-demo/)
 
 ## Local Installation
 
@@ -16,7 +16,7 @@ To install and run the project locally, follow these steps:
 
 - Clone the repository: `git clone https://github.com/alexeymasasin/todo-app-demo.git`
 - Navigate to the project directory: `cd todo-app-demo`
-- Install the dependencies: `npm i`
+- Install dependencies: `npm i`
 - Start the development server: `npm start`
 
 The app will now be running at [http://localhost:3000/](http://localhost:3000/).
