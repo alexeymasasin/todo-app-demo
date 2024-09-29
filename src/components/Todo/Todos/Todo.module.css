@@ -1,148 +1,148 @@
 .todo {
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-  padding: 8px 10px 12px;
-  margin: 0 auto;
-  font-size: 1.4rem;
-  border-radius: 12px;
-  border: 3px solid var(--text_color);
-  color: var(--text_color);
-  transition: 0.3s;
-  background-color: var(--todo_bg);
-  box-sizing: border-box;
-  min-height: 60px;
-  position: relative;
-  width: 560px;
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+	padding: 8px 10px 12px;
+	margin: 0 auto;
+	font-size: 1.4rem;
+	border-radius: 12px;
+	border: 3px solid var(--text_color);
+	color: var(--text_color);
+	transition: 0.3s;
+	background-color: var(--todo_bg);
+	box-sizing: border-box;
+	min-height: 60px;
+	position: relative;
+	width: 560px;
 }
 
 .completed {
-  opacity: 0.5;
+	opacity: 0.5;
 }
 
 .todo_left {
-  margin-top: 5px;
-  text-align: left;
-  display: flex;
-  align-items: center;
-  margin-right: 10px;
+	margin-top: 5px;
+	text-align: left;
+	display: flex;
+	align-items: center;
+	margin-right: 10px;
 }
 
 .todo_text {
-  width: 100%;
-  text-align: left;
-  display: flex;
-  align-items: center;
-  word-break: break-word;
-  margin-top: 4px;
+	width: 100%;
+	text-align: left;
+	display: flex;
+	align-items: center;
+	word-break: break-word;
+	margin-top: 4px;
 }
 
 .todo_right {
-  margin-top: 5px;
-  display: flex;
-  align-items: center;
-  gap: 3px;
-  margin-left: 10px;
-  align-items: center;
+	margin-top: 5px;
+	display: flex;
+	align-items: center;
+	gap: 3px;
+	margin-left: 10px;
+	align-items: center;
 }
 
 .todo_move_icon {
-  color: var(--text_color);
-  font-size: 1.8rem;
-  transition: all 0.3s;
-  cursor: -webkit-grab;
-  display: flex;
-  align-items: center;
-  opacity: 1;
+	color: var(--text_color);
+	font-size: 1.8rem;
+	transition: all 0.3s;
+	/* cursor: -webkit-grab; */
+	display: flex;
+	align-items: center;
+	opacity: 1;
 }
 
 .todo_icon,
 .todo_delete_icon,
 .todo_done_icon {
-  cursor: pointer;
-  color: var(--text_color);
-  font-size: 1.8rem;
-  transition: all 0.3s;
+	cursor: pointer;
+	color: var(--text_color);
+	font-size: 1.8rem;
+	transition: all 0.3s;
 }
 
 .important_todo {
-  border: 3px solid var(--important-todo);
-  color: var(--important-todo);
+	border: 3px solid var(--important-todo);
+	color: var(--important-todo);
 }
 
 .important_todo .todo_delete_icon,
 .important_todo .todo_done_icon,
 .important_todo .todo_move_icon {
-  color: var(--important-todo);
+	color: var(--important-todo);
 }
 
 .important {
-  color: var(--important-todo);
+	color: var(--important-todo);
 }
 
 @media (max-width: 650px) {
-  .todo {
-    width: 90%;
-    font-size: 1.2rem;
-  }
+	.todo {
+		width: 90%;
+		font-size: 1.2rem;
+	}
 
-  .todo_right {
-    margin-top: 2px;
-    flex-direction: column;
-  }
+	.todo_right {
+		margin-top: 2px;
+		flex-direction: column;
+	}
 }
 
 @media (hover: hover) {
-  .todo_delete_icon:hover,
-  .todo_done_icon:hover {
-    transform: scale(1.2);
-  }
+	.todo_delete_icon:hover,
+	.todo_done_icon:hover {
+		transform: scale(1.2);
+	}
 
-  .todo_move_icon:hover {
-  }
+	.todo_move_icon:hover {
+	}
 
-  .todo_delete_icon:hover {
-    color: var(--delete-icon);
-  }
+	.todo_delete_icon:hover {
+		color: var(--delete-icon);
+	}
 
-  .todo_done_icon:hover {
-    color: var(--done-icon);
-  }
+	.todo_done_icon:hover {
+		color: var(--done-icon);
+	}
 
-  .completed_todo:hover {
-    opacity: 0.65
-  }
+	.completed_todo:hover {
+		opacity: 0.65;
+	}
 
-  .todo_icon:hover {
-    transform: scale(1.15);
-    color: var(--important-todo);
-  }
+	.todo_icon:hover {
+		transform: scale(1.15);
+		color: var(--important-todo);
+	}
 }
 
 @media (hover: none) {
-  .todo_delete_icon:active,
-  .todo_done_icon:active {
-    transform: scale(1.2);
-  }
+	.todo_delete_icon:active,
+	.todo_done_icon:active {
+		transform: scale(1.2);
+	}
 
-  .todo_delete_icon:active {
-    color: var(--delete-icon);
-  }
+	.todo_delete_icon:active {
+		color: var(--delete-icon);
+	}
 
-  .todo_done_icon:active {
-    color: var(--done-icon);
-  }
+	.todo_done_icon:active {
+		color: var(--done-icon);
+	}
 
-  .completed_todo:active {
-    opacity: 0.65
-  }
+	.completed_todo:active {
+		opacity: 0.65;
+	}
 
-  .todo_move_icon:active {
-    transform: scale(1.2);
-  }
+	.todo_move_icon:active {
+		transform: scale(1.2);
+	}
 
-  .todo_icon:active {
-    transform: scale(1.15);
-    color: var(--important-todo);
-  }
+	.todo_icon:active {
+		transform: scale(1.15);
+		color: var(--important-todo);
+	}
 }
